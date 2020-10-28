@@ -3,826 +3,998 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-     integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-      crossorigin="anonymous" />
+    <title>CV</title>
+      <!-- favicon starts -->
       <link rel="short icon" href="../main web header/logo/mak_logo.jpg">
-    <link rel="stylesheet" href="style.css">
-    <title>Mak</title>
+      <!-- favicon ends ---->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.1/css/unicons.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+        /* Font */ 
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
 
-:root {
-  --primary-color: #047aed;
-  --secondary-color: #1c3fa8;
-  --dark-color: #002240;
-  --light-color: #f4f4f4;
-  --success-color: #5cb85c;
-  --error-color: #d9534f;
+/* colors */
+
+
+:root{
+    --primary: #1a253f;
+    --dark: #151a33;
+    --secondry: #2b55cc;
+    --info: #4d79f6;
+    --ternary: #848db3;
+    --pure: #eff2f9;
+    --fade: #7081b9;
+    --mild: #8997bd;
+    --footer: #212a4a;
+    --black: #060b1b;
+    --twitter: #4ac7ec;
+    --dribble: #ff5da0;
+    --success: #1ecab8;
+    --danger: #f1646c;
+    --dark-blue: #28365f;
+    --dark-gray: #171f33;
+    --yellow: #f3c74d;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
-
-body {
-  font-family: 'Lato', sans-serif;
-  color: #333;
-  line-height: 1.6;
+body{
+    font-family: 'IBM Plex Sans', sans-serif;
+    background: var(--dark);
+    -webkit-font-smoothing: antialiased;
+    padding-bottom: 4rem;
 }
-
-ul {
-  list-style-type: none;
-}
-
-a {
-  text-decoration: none;
-  color: #333;
-}
-
-h1,
-h2 {
-  font-weight: 300;
-  line-height: 1.2;
-  margin: 10px 0;
-}
-
-p {
-  margin: 10px 0;
-}
-
-img {
-  width: 100%;
-}
-
-code,
-pre {
-  background: #333;
-  color: #fff;
-  padding: 10px;
-}
-
-.hidden {
-  visibility: hidden;
-  height: 0;
-}
-
-/* Navbar */
-.navbar {
-  background-color: var(--primary-color);
-  color: #fff;
-  height: 70px;
-}
-
-.navbar ul {
-  display: flex;
-}
-
-.navbar a {
-  color: #fff;
-  padding: 10px;
-  margin: 0 5px;
-}
-
-.navbar a:hover {
-  border-bottom: 2px #fff solid;
-}
-
-.navbar .flex {
-  justify-content: space-between;
-}
-
-/* Showcase */
-.showcase {
-  height: 400px;
-  background-color: var(--primary-color);
-  color: #fff;
-  position: relative;
-}
-
-.showcase h1 {
-  font-size: 40px;
-}
-
-.showcase p {
-  margin: 20px 0;
-}
-
-.showcase .grid {
-  overflow: visible;
-  grid-template-columns: 55% auto;
-  gap: 30px;
-}
-
-.showcase-text {
-  animation: slideInFromLeft 1s ease-in;
-}
-
-.showcase-form {
-  position: relative;
-  top: 60px;
-  height: 350px;
-  width: 400px;
-  padding: 40px;
-  z-index: 100;
-  justify-self: flex-end;
-  animation: slideInFromRight 1s ease-in;
-}
-
-.showcase-form .form-control {
-  margin: 30px 0;
-}
-
-.showcase-form input[type='text'],
-.showcase-form input[type='email'] {
-  border: 0;
-  border-bottom: 1px solid #b4becb;
-  width: 100%;
-  padding: 3px;
-  font-size: 16px;
-}
-
-.showcase-form input:focus {
-  outline: none;
-}
-
-.showcase::before,
-.showcase::after {
-  content: '';
-  position: absolute;
-  height: 100px;
-  bottom: -70px;
-  right: 0;
-  left: 0;
-  background: #fff;
-  transform: skewY(-3deg);
-  -webkit-transform: skewY(-3deg);
-  -moz-transform: skewY(-3deg);
-  -ms-transform: skewY(-3deg);
-}
-
-/* Stats */
-.stats {
-  padding-top: 100px;
-  animation: slideInFromBottom 1s ease-in;
-}
-
-.stats-heading {
-  max-width: 500px;
-  margin: auto;
-}
-
-.stats .grid h3 {
-  font-size: 35px;
-}
-
-.stats .grid p {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-/* Cli */
-.cli .grid{
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-}
-.cli .grid > *:first-child{
-    grid-column: 1 / span 2;
-    grid-row: 1 / span 2;
-}
-
-/* Cloud */
-.cloud .grid {
-    grid-template-columns: 4fr 3fr;
-  }
-  
-  /* Languages */
-  
-  .languages .flex {
-    flex-wrap: wrap;
-  }
-  
-  .languages .card {
-    text-align: center;
-    margin: 18px 10px 40px;
-    transition: transform 0.2s ease-in;
-  }
-  
-  .languages .card h4 {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-  
-  .languages .card:hover {
-    transform: translateY(-15px);
-  }
-
-  
-/* Features */
-.features-head img,
-.docs-head img {
-  width: 200px;
-  justify-self: flex-end;
-}
-
-.features-sub-head img {
-  width: 300px;
-  justify-self: flex-end;
-}
-
-.features-main .card > i {
-  margin-right: 20px;
-}
-
-.features-main .grid {
-  padding: 30px;
-}
-
-.features-main .grid > *:first-child {
-  grid-column: 1 / span 3;
-}
-
-.features-main .grid > *:nth-child(2) {
-  grid-column: 1 / span 2;
-}
-
-/* Docs */
-.docs-main h3 {
-  margin: 20px 0;
-}
-
-.docs-main .grid {
-  grid-template-columns: 1fr 2fr;
-  align-items: flex-start;
-}
-
-.docs-main nav li {
-  font-size: 17px;
-  padding-bottom: 5px;
-  margin-bottom: 5px;
-  border-bottom: 1px #ccc solid;
-}
-
-.docs-main a:hover {
-  font-weight: bold;
-}
-
-/* Footer */
-.footer .social a {
-  margin: 0 10px;
-}
-
-/* Animations */
-@keyframes slideInFromLeft {
-    0% {
-      transform: translateX(-100%);
-    }
-  
-    100% {
-      transform: translateX(0);
-    }
-  }
-  
-  @keyframes slideInFromRight {
-    0% {
-      transform: translateX(100%);
-    }
-  
-    100% {
-      transform: translateX(0);
-    }
-  }
-  
-  @keyframes slideInFromTop {
-    0% {
-      transform: translateY(-100%);
-    }
-  
-    100% {
-      transform: translateX(0);
-    }
-  }
-  
-  @keyframes slideInFromBottom {
-    0% {
-      transform: translateY(100%);
-    }
-  
-    100% {
-      transform: translateX(0);
-    }
-  }
-  
-  /* Tablets and under */
-  @media (max-width: 768px) {
-    .grid,
-    .showcase .grid,
-    .stats .grid,
-    .cli .grid,
-    .cloud .grid,
-    .features-main .grid,
-    .docs-main .grid {
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr;
-    }
-  
-    .showcase {
-      height: auto;
-    }
-  
-    .showcase-text {
-      text-align: center;
-      margin-top: 40px;
-      animation: slideInFromTop 1s ease-in;
-    }
-  
-    .showcase-form {
-      justify-self: center;
-      margin: auto;
-      animation: slideInFromBottom 1s ease-in;
-    }
-  
-    .cli .grid > *:first-child {
-      grid-column: 1;
-      grid-row: 1;
-    }
-  
-    .features-head,
-    .features-sub-head,
-    .docs-head {
-      text-align: center;
-    }
-  
-    .features-head img,
-    .features-sub-head img,
-    .docs-head img {
-      justify-self: center;
-    }
-  
-    .features-main .grid > *:first-child,
-    .features-main .grid > *:nth-child(2) {
-      grid-column: 1;
-    }
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  /* //////////// */
-.container {
-    max-width: 1100px;
+section{
+    padding: 2.5rem;
+    background: var(--primary);
     margin: 0 auto;
-    overflow: auto;
-    padding: 0 40px;
-  }
-  
-  .card {
-    background-color: #fff;
-    color: #333;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    margin: 10px;
-  }
-  
-  .btn {
-    display: inline-block;
-    padding: 10px 30px;
-    cursor: pointer;
-    background: var(--primary-color);
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-  }
-  
-  .btn-outline {
-    background-color: transparent;
-    border: 1px #fff solid;
-  }
-  
-  .btn:hover {
-    transform: scale(0.98);
-  }
-  
-  /* Backgrounds & colored buttons */
-  .bg-primary,
-  .btn-primary {
-    background-color: var(--primary-color);
-    color: #fff;
-  }
-  
-  .bg-secondary,
-  .btn-secondary {
-    background-color: var(--secondary-color);
-    color: #fff;
-  }
-  
-  .bg-dark,
-  .btn-dark {
-    background-color: var(--dark-color);
-    color: #fff;
-  }
-  
-  .bg-light,
-  .btn-light {
-    background-color: var(--light-color);
-    color: #333;
-  }
-  
-  .bg-primary a,
-  .btn-primary a,
-  .bg-secondary a,
-  .btn-secondary a,
-  .bg-dark a,
-  .btn-dark a {
-    color: #fff;
-  }
-  
-  /* Text colors */
-  .text-primary {
-    color: var(--primary-color);
-  }
-  
-  .text-secondary {
-    color: var(--secondary-color);
-  }
-  
-  .text-dark {
-    color: var(--dark-color);
-  }
-  
-  .text-light {
-    color: var(--light-color);
-  }
-  
-  /* Text sizes */
-  .lead {
-    font-size: 20px;
-  }
-  
-  .sm {
-    font-size: 1rem;
-  }
-  
-  .md {
-    font-size: 2rem;
-  }
-  
-  .lg {
-    font-size: 3rem;
-  }
-  
-  .xl {
-    font-size: 4rem;
-  }
-  
-  .text-center {
-    text-align: center;
-  }
-  
-  /* Alert */
-  .alert {
-    background-color: var(--light-color);
-    padding: 10px 20px;
-    font-weight: bold;
-    margin: 15px 0;
-  }
-  
-  .alert i {
-    margin-right: 10px;
-  }
-  
-  .alert-success {
-    background-color: var(--success-color);
-    color: #fff;
-  }
-  
-  .alert-error {
-    background-color: var(--error-color);
-    color: #fff;
-  }
-  
-  .flex {
+}
+h1, h2 ,h3 ,h4 ,h5 ,h6{
+    margin: 0;
+    line-height: 1;
+}
+.logo-a{
+  color: #fff;
+  text-decoration: none;
+}
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+nav{
+    background: var(--primary);
+    padding: 1.6rem 0;
+}
+nav .inner{
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100%;
-  }
-  
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    justify-content: center;
+    justify-content: space-between;
+}
+nav .inner .logo{
+    text-transform: uppercase;
+    color: var(--pure);
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+nav .inner .logo i{
+    color: var(--info);
+}
+nav .inner button{
+    background: var(--secondry);
+    border: none;
+    padding: 0.6rem 1rem;
+    color: var(--pure);
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+section.profile{
+    background: var(--black);
+    display: flex;
     align-items: center;
-    height: 100%;
-  }
-  
-  .grid-3 {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  
-  /* Margin */
-  .my-1 {
-    margin: 1rem 0;
-  }
-  
-  .my-2 {
-    margin: 1.5rem 0;
-  }
-  
-  .my-3 {
-    margin: 2rem 0;
-  }
-  
-  .my-4 {
-    margin: 3rem 0;
-  }
-  
-  .my-5 {
-    margin: 4rem 0;
-  }
-  
-  .m-1 {
-    margin: 1rem;
-  }
-  
-  .m-2 {
-    margin: 1.5rem;
-  }
-  
-  .m-3 {
-    margin: 2rem;
-  }
-  
-  .m-4 {
-    margin: 3rem;
-  }
-  
-  .m-5 {
-    margin: 4rem;
-  }
-  
-  /* Padding */
-  .py-1 {
-    padding: 1rem 0;
-  }
-  
-  .py-2 {
-    padding: 1.5rem 0;
-  }
-  
-  .py-3 {
-    padding: 2rem 0;
-  }
-  
-  .py-4 {
-    padding: 3rem 0;
-  }
-  
-  .py-5 {
-    padding: 4rem 0;
-  }
-  
-  .p-1 {
-    padding: 1rem;
-  }
-  
-  .p-2 {
-    padding: 1.5rem;
-  }
-  
-  .p-3 {
-    padding: 2rem;
-  }
-  
-  .p-4 {
     padding: 3rem;
-  }
-  
-  .p-5 {
-    padding: 4rem;
-  }
-  a{
-      color: #fff;
-      text-decoration: none;
-  }
+    margin-top: 60px;
+    clip-path: polygon(0  0, 100% 0, 100% 80%, 25% 100%, 0 80%);
+    padding-bottom: 5rem;
+}
+section.profile .left{
+    flex: 2;
+    display: flex;
+    align-items: center;
+}
+section.profile .left .right{
+    flex: 1;
+}
+section.profile .left h2{
+    color: var(--fade);
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+section.profile .left p{
+    color: var(--mild);
+    font-size: 14px;
+}
+section.profile .left img{
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+section.profile .left .avatar_block{
+    position: relative;
+    margin-right: 2rem;
+}
+/*section.profile .left .avatar_block span{
+    position: absolute;
+    right: 4px;
+    bottom: 4px;
+    background: var(--info);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--pure);
+    box-shadow: 0px 0px 20px 0px rgba(32, 41, 54, 0.05);
+    cursor: pointer;
+}*/
+section.profile .right ul.contact{
+    list-style-type: none;
+    margin-bottom: 1.6rem;
+}
+section.profile .right ul.contact li{
+    color: var(--ternary);
+    margin-bottom: 0.7rem;
+    font-size: 14px;
+}
+section.profile .right ul.contact li i{
+    font-size: 18px;
+    margin-right: 0.3rem;
+}
+section.profile .right ul.socials{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+section.profile .right ul.socials li{
+    margin-right: 0.8rem;
+}
+section.profile .right ul.socials li a{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    color: var(--pure);
+    line-height: 36px;
+    text-align: center;
+}
+section.profile .right ul.socials li:nth-child(1) a{
+  background: var(--secondry);
+} 
+section.profile .right ul.socials li:nth-child(2) a{
+    background: var(--twitter);
+} 
+section.profile .right ul.socials li:nth-child(3) a{
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+} 
 
-  /* ///////////////// */
-  /* Mobile */
-  @media (max-width: 500px) {
-    .navbar {
-      height: 110px;
+
+
+/*/////////////about//////////*/
+
+.section_heading{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--pure);
+    margin-bottom: 3rem;
+    text-shadow: 0 0 1px rgba(40, 54, 95, 0.1);
+    position: relative;
+}
+.section_heading:after{
+    content: '';
+    height: 3px;
+    width: 80px;
+    position: absolute;
+    top: 28px;
+    left: 0;
+    border: 1px dotted var(--danger);
+}
+main{
+    background: var(--primary);
+}
+section.about .contant{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 16rem;
+}
+section.about .contant h2{
+    color: var(--info);
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+    margin-bottom: 1.6rem;
+}
+section.about .contant p{
+    color: var(--ternary);
+    font-size: 14px;
+    line-height: 1.6;
+    letter-spacing: 0.1px;
+    margin-bottom: 1rem;
+}
+section.about .contant .left button{
+    background: rgba(77, 121, 246, 0.1);
+    color: var(--info);
+    padding: 4px 8px;
+    font-size: 12px;
+    border: none;
+    line-height: 24px;
+    outline: none;
+    cursor: pointer;
+}
+section.about .contant .right p{
+    line-height: 1.6;
+    font-size: 14px;
+    color: var(--ternary);
+    letter-spacing: 0.1px;
+    margin-bottom: 1rem;
+}
+section.about .contant .right p span:nth-child(1){
+    width: 130px;
+    float: left;
+    font-weight: 500;
+    padding-right: 10px;
+    display: block;
+    position: relative;
+}
+section.about .contant .right p span:nth-child(2){
+    padding-left: 150px;
+    display: block;
+}
+section.about .contant .right p span:nth-child(1):after{
+   content: ":";
+   position: absolute;
+   right: 0;
+   top: 0;
+}
+
+/*//////skills///////*/
+
+section.skills .contant{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+section.skills .contant .left{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+section.skills .contant .left .heading{
+    margin-bottom: 2rem;
+}
+section.skills .contant .left .heading i{
+    color: var(--fade);
+    font-size: 52px;
+    padding-bottom: 10px;
+}
+section.skills .contant .left h5{
+    font-size: 16px;
+    margin-top: 0.5rem;
+    color: var(--mild);
+}
+section.skills .contant p{
+    font-size: 14px;
+    color: var(--ternary);
+    line-height: 1.7;
+}
+section.skills .contant .left p.center{
+    color: var(--fade);
+}
+section.skills .contant .left .item{
+    margin-bottom: 2.6rem;
+    margin-left: 15px;
+    position: relative;
+}
+section.skills .contant .left .item:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    border: 2px solid var(--info);
+    border-radius: 50%;
+    margin-left: -21px;
+}
+section.skills .contant .left .timeline_wrapper{
+    border-left: 2px dotted var(--dark-blue);
+
+}
+
+section.skills .skills_wrapper .skills-box h4{
+    color: var(--ternary);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+section.skills .skills_wrapper .skills-box{
+    margin-bottom: 4rem;
+}
+section.skills .skills_wrapper .skills-box .progress_wrap{
+    background: #20294a;
+    height: 6px;
+    width: 100%;
+    box-shadow: 0px 0px 1px 0.25px #4d79f6;
+    border-radius: 10px;
+    border: 2px solid var(--primary);
+}
+.html{
+    display: block;
+    height: 100%;
+    background: var(--info);
+    width: 78%;
+    position: relative;
+}
+.css{
+    display: block;
+    height: 100%;
+    background: var(--info);
+    width: 63%;
+    position: relative;
+}
+.java{
+    display: block;
+    height: 100%;
+    background: var(--info);
+    width: 51%;
+    position: relative;
+}
+.ui{
+    display: block;
+    height: 100%;
+    background: var(--info);
+    width: 89%;
+    position: relative;
+}
+
+.tooltip{
+    padding-top: 4px;
+    right: 0;
+    top: 0;
+    margin-bottom: 10px;
+    color: var(--ternary);
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: all 1s ease-in-out;
+}
+
+/*/////////// counter_wrapper ////////*/
+
+section.counter_wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: var(--dark-gray);
+}
+section.counter_wrapper > div{
+    display: flex;
+    align-items: center;
+}
+section.counter_wrapper > div i{
+  font-size: 42px;
+  margin-right: 5px;
+}
+section.counter_wrapper > div:nth-child(1) i{
+    color: var(--yellow);
+}
+section.counter_wrapper > div:nth-child(2) i{
+    color: var(--success);
+}
+section.counter_wrapper > div:nth-child(3) i{
+    color: var(--dribble);
+}
+section.counter_wrapper > div h3{
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--fade);
+    margin-bottom: 8px;
+}
+section.counter_wrapper > div h5{
+    font-size: 14px;
+    color: var(--fade);
+}
+
+/*///// work ////////*/
+
+section.work .wrapper .portfolio_wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+section.work .portfolio_wrapper a img{
+    width: 70%;
+    height: 70%;
+    padding-top: 10px;
+   object-fit: cover;
+}
+
+/*//////brands////////*/
+
+section.brand .brands_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/*///conatct///////(*/
+
+section.contact .wrapper{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 60px;
+    margin-top: 40px;
+    align-items: center;
+}
+section.contact .wrapper .left > div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.col{
+    margin-right: 30px;
+}
+section.contact .wrapper .left i{
+    font-size: 30px;
+    color: var(--info);
+}
+section.contact .wrapper .left h4{
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 5px;
+    margin-right: 6rem;
+}
+section.contact .wrapper .left{
+    color: var(--ternary);
+}
+section.contact .wrapper .left h4 + span{
+  font-weight: 100;
+  font-size: 14px;
+  margin-right: 10rem;
+}
+
+
+section.contact .wrapper .right .form_group{
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     grid-gap: 38px;
+     align-items: center;
+     margin-bottom: 14px;
+}
+section.contact .wrapper .right .form_group > div{
+    display: flex;
+    flex-direction: column;
+}
+section.contact .wrapper .right .form_group > div label{
+    color: var(--ternary);
+    margin-bottom: 8px;
+}
+section.contact .wrapper .right .form_group > div input,
+section.contact .wrapper .right .form_group.textarea_wrapper textarea{
+    padding: 10px;
+    border-radius: 4px;
+    background: transparent;
+    outline: none;
+    border: 1px solid var(--dark-blue);
+    color: var(--ternary);
+    font-size: 16px;
+
+    resize: none;
+}
+section.contact .wrapper .right .form_group.textarea_wrapper{
+    display: block;
+    width: 100%;
+}
+section.contact .wrapper .right button{
+    background: var(--info);
+    border: none;
+    padding: 1rem 2rem;
+    color: var(--pure);
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    transition: all .3s ease-in-out;
+}
+section.contact .wrapper .right a{
+    color: #fff;
+    text-decoration: none;
+    background: var(--info);
+}
+section.contact .wrapper .right a:hover{
+    background: var(--secondry);
+    color: #fff;
+    text-decoration: none;
+}
+section.contact .wrapper .right button:hover{
+    background: var(--secondry);
+}
+
+footer{
+    background: var(--footer);
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 14px;
+    color: var(--ternary);
+}
+
+/* Media */
+
+@media (max-width: 1280px) {
+    .container{
+        max-width: 90%;
     }
-  
-    .navbar .flex {
-      flex-direction: column;
+}
+
+@media (max-width: 1024px) {
+    .container{
+        max-width: 90%;
     }
-  
-    .navbar ul {
-      padding: 10px;
-      background-color: rgba(0, 0, 0, 0.1);
+    section.profile{
+        flex-direction: column;
+        align-items: flex-start;
+        clip-path: none;
     }
-    
-    .showcase-form {
-      width: 300px;
+    section.profile .left{
+        margin-bottom: 2rem;
     }
-  }
-  
+    section.profile .right{
+        align-self: flex-end;
+    }
+    section.work .wrapper{
+        display: block;
+    }
+    section.brands{
+        margin-top: 4rem;
+    }
+}
+
+@media (max-width: 970px) {
+    section.skills .contant{
+        display: block;
+    }
+    section.skills .contant .left{
+        margin-bottom: 6rem;
+    }
+    section.brand .brands_wrapper{
+        flex-wrap: wrap;
+    }
+    section.brand .brands_wrapper img{
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    section.about .contant{
+        display: block;
+    }
+    section.about .contant .left{
+        margin-bottom: 6rem;
+    }
+    section.contact .wrapper{
+        display: block;
+    }
+    section.contact .wrapper .left{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    } 
+    section.brand{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    section.brand > div{
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    section.profile{
+        align-items: center;
+    }
+    section.profile .right{
+        align-self: center;
+    }
+    section.profile .left{
+        margin-bottom: 6rem;
+    }
+    section.contact .wrapper .right .form_group{
+        grid-template-columns: 1fr;
+    }
+}
     </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <div class="navbar">
-        <div class="container flex">
-            <h1 class="logo">MAK</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="features.html">Features</a></li>
-                    <li><a href="docs.html">Docs</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-    
-    <!-- Showcase -->
-    <section class="showcase">
-        <div class="container grid">
-            <div class="showcase-text">
-                <h1>Easier Deployment</h1>
-                <p>Deploy web apps of all kinds, from large scale enterprise APIs to static websites for individuals. Fill out the form to try a demo of our platform</p>
-                <a href="features.html" class="btn btn-outline">Read More</a>
+    <nav>
+        <div class="container inner">
+            <div class="logo">
+              <i class="fa fa-cell"></i>
+              <a href="index.html" class="logo-a">Mak WebDeveloping</a>
             </div>
-
-            <div class="showcase-form card">
-                <h2>Request a Demo</h2>
-                <form name="contact" netlify-honeypot="bot-field" method="POST" data-netlify="true">
-                    <input type="hidden" name="form-name" value="contact">
-                    <p class="hidden">
-                        <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-                      </p>
-                    <div class="form-control">
-                        <input type="text" name="name" placeholder="Name" required>
-                    </div>
-                    <div class="form-control">
-                        <input type="text" name="company" placeholder="Company Name" required>
-                    </div>
-                    <div class="form-control">
-                        <input type="email" name="email" placeholder="Email" required>
-                    </div>
-                    <input type="submit" value="Send" class="btn btn-primary">
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats -->
-    <section class="stats">
-        <div class="container">
-            <h3 class="stats-heading text-center my-1">
-                Welcome to the best platform for building applications of all types with modern architecture and scaling
-            </h3>
-
-            <div class="grid grid-3 text-center my-4">
-                <div>
-                    <i class="fas fa-server fa-3x"></i>
-                    <h3>10,349,405</h3>
-                    <p class="text-secondary">Deployments</p>
-                </div>
-                <div>
-                    <i class="fas fa-upload fa-3x"></i>
-                    <h3>987 TB</h3>
-                    <p class="text-secondary">Published</p>
-                </div>
-                <div>
-                    <i class="fas fa-project-diagram fa-3x"></i>
-                    <h3>2,343,265</h3>
-                    <p class="text-secondary">Projects</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Cli -->
-      <!-- Cli -->
-      <section class="cli">
-        <div class="container grid">
-            <img src="images/1.png" alt="">
-            <div class="card">
-                <h3>Easy to use, cross platform CLI</h3>
-            </div>
-            <div class="card">
-                <h3>Deploy in seconds</h3>
-            </div>
-        </div>
-    </section>
-    <!-- cloud -->
- <!-- Cloud -->
- <section class="cloud bg-primary my-2 py-2">
-    <div class="container grid">
-        <div class="text-center">
-            <h2 class="lg">Extreme Cloud Hosting</h2>
-            <p class="lead my-1">Cloud hosting like you've never seen. Fast, efficient and scalable</p>
-            <a href="features.html" class="btn btn-dark">Read More</a>
-        </div>
-        <img src="images/cloud.png" alt="">
-    </div>
-</section>
-
-<!-- Languages -->
-<section class="languages">
-    <h2 class="md text-center my-2">
-        Supported Languages
-    </h2>
-    <div class="container flex">
-        <div class="card">
-            <h4>Node.js</h4>
-            <img src="images/logos/node.png" alt="">
-        </div>
-        <div class="card">
-            <h4>Python</h4>
-            <img src="images/logos/python.png" alt="">
-          </div>
-          <div class="card">
-            <h4>C#</h4>
-            <img src="images/logos/csharp.png" alt="">
-          </div>
-          <div class="card">
-            <h4>Ruby</h4>
-            <img src="images/logos/ruby.png" alt="">
-          </div>
-          <div class="card">
-            <h4>PHP</h4>
-            <img src="images/logos/php.png" alt="">
-          </div>
-          <div class="card">
-            <h4>Scala</h4>
-            <img src="images/logos/scala.png" alt="">
-          </div>
-          <div class="card">
-            <h4>Clojure</h4>
-            <img src="images/logos/clojure.png" alt="">
-          </div>
-    </div>
-</section>
-
-    <!-- Footer -->
-    <footer class="footer bg-dark py-5">
-        <div class="container grid grid-3">
             <div>
-                <h1>MAK
-                </h1>
-                <p>Copyright &copy; 2020</p>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="features.html">Features</a></li>
-                    <li><a href="docs.html">Docs</a></li>
-                </ul>
-            </nav>
-            <div class="social">
-                <a href="https://www.facebook.com/mohammad.abdullahk"><i class="fab fa-facebook fa-2x"></i></a>
-                <a href="https://www.instagram.com/qwhm78/"><i class="fab fa-instagram fa-2x"></i></a>
-                <a href="https://twitter.com/qwhm78"><i class="fab fa-twitter fa-2x"></i></a>
+                <button>
+                    <i class="fa fa-print"></i>
+                    Print
+                </button>
             </div>
         </div>
-    </footer>
-    </body>
-    </html>
+    </nav>
+
+    <main class="container">
+        <section class="profile" id="profile_ripple">
+            <div class="left">
+                <div class="avatar_block">
+                   <image src="pic.jpg">
+                       <span>
+                           <i class="fa fa-comment-dots"></i>
+                       </span>
+                       <div>
+                           <h2>Mohammad Abdullah k</h2>
+                           <p class="cd-headline lodaing-bar">
+                               <span class="cd-words-wrapper">
+                                   <b class="is-visible">
+                                      <!---- UI/UX Desginer -->
+                                   </b>
+                                   <b class="is-visible-b">Full Stack Web Developer</b>
+                               </span>
+                           </p>
+                       </div>
+                </div>
+            </div>
+            <div class="right">
+               <ul class="contact">
+                   <li>
+                       <i class="fa fa-phone"></i>
+                      <strong>Phone: </strong>+92-333-023-5820
+                    </li>
+                    <li>
+                        <i class="fa fa-envelope"></i>
+                       <strong>Email: </strong>mohammad127313@gmail.com
+                    </li>
+               </ul>
+               <ul class="socials">
+                   <li>
+                       <a href="#">
+                           <i class="fa fa-facebook"></i>
+                       </a>
+                   </li>
+                   <li>
+                    <a href="#">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                </li>
+               </ul>
+            </div>
+        </section>
+    
+
+
+<!--about-->
+
+<section class="about">
+
+   <h1 class="section_heading">About Me</h1>
+   <div class="container">
+   <div class="contant">
+       <div class="left">
+           <h2>I am Mohammad Abdullah k</h2>
+           <p>MakWebDeveloping website is all about creativity and innovative work in the
+            field of Technology. We provide web development courses videos, MCS
+            important videos and technology videos and articles. You will get all of
+            my youtube videos source code and you are free to use it and make changes.</p>
+           <button>Download CV</button>
+        </div>
+       <div class="right">
+           <p>
+               <span>Name</span>
+               <span>Mohammad Abullah k</span>
+           </p>
+           <p>
+            <span>Date of Birth</span>
+            <span>21 OCT, 2008</span>
+        </p>
+        <p>
+            <span>Spoken languages</span>
+            <span>Urdu, English</span>
+        </p>
+        <p>
+            <span>Nationality</span>
+            <span>Pakistan</span>
+        </p>
+        <p>
+            <span>Intrest</span>
+            <span>Web Developing, Traveling, Reading</span>
+        </p>
+       </div>
+   </div>
+</div>
+</section>
+
+<!--skills-->
+
+<section class="skills">
+    <h1 class="section_heading">Education</h1>
+   <div class="contant">
+    <div class="left">
+        <div class="inner_left">
+            <div class="heading">
+                <i class="fa fa-graduation-cap"></i>
+                <h5>Education</h5>
+            </div>
+            <div class="timeline_wrapper">
+                <div class="item">
+                    <p>2011 - 2025</p>
+                    <p class="center">High School</p>
+                    <p>Secondry Education</p>
+                </div>
+                <div class="item">
+                    <p>2030 - 2032</p>
+                    <p class="center">University</p>
+                    <p>Bachelor of computer applications</p>
+                </div>
+                <div class="item">
+                    <p>2033 - 2035</p>
+                    <p class="center">Master</p>
+                    <p>Master in computer scince</p>
+                </div>
+            </div>
+        </div>
+        <div class="inner_right">
+            <div class="heading">
+                <i class="fa fa-suitcase"></i>
+                <h5>Exprience</h5>
+            </div>
+            <!-- second start -->
+            <div class="timeline_wrapper">
+                <div class="item">
+                    <p>2028 - 2045</p>
+                    <p class="center">Web Developer</p>
+                    <p>MSC Web Developers Comapany</p>
+                </div>
+                <div class="item">
+                    <p>2025 - 2046</p>
+                    <p class="center">Senior Web Development</p>
+                    <p>Apple Co.</p>
+                </div>
+                <div class="item">
+                    <p>2020 - 2025</p>
+                    <p class="center">Web Desginer - FreeLancer</p>
+                    <p>Mak Tutorials</p>
+                </div>
+            </div>
+            <!-- second end -->
+        </div>
+    </div>
+    <div class="right">
+        <div class="skills_wrapper">
+            <div class="skills-box">
+                <h4>HTML</h4>
+                <div class="progress_wrap">
+                  <span data-percent="78" class="progress_bar">
+                      <span class="html tooltip">78%</span>
+                  </span>
+                </div>
+            </div>
+            <div class="skills-box">
+                <h4>CSS</h4>
+                <div class="progress_wrap">
+                  <span data-percent="63" class="progress_bar">
+                      <span class="css tooltip">63%</span>
+                  </span>
+                </div>
+            </div>
+            <div class="skills-box">
+                <h4>JAVA SCRIPT</h4>
+                <div class="progress_wrap">
+                  <span data-percent="51" class="progress_bar">
+                      <span class="java tooltip">51%</span>
+                    </div>
+                </div>
+
+                <div class="skills-box">
+                    <h4>UI Desgine</h4>
+                    <div class="progress_wrap">
+                      <span data-percent="89" class="progress_bar">
+                          <span class="ui tooltip">89%</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+   </div>
+</section>
+
+<!-- counter_wrapper -->
+
+<section class="counter_wrapper">
+   <div>
+      <div>
+          <i class="fa fa-print"></i>
+      </div>
+      <div>
+          <h3><span class="counter" data-counter="1500">1500</span>+</h3>
+          <h5>Completed Projects</h5>
+      </div>
+   </div>
+   <div>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <div>
+        <i class="fa fa-mobile"></i>
+    </div>
+    <div>
+        <h3><span class="counter" data-counter="1458">1458</span>k</h3>
+        <h5>Happy Clients</h5>
+    </div>
+ </div>
+ <div>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <div>
+        <i class="fa fa-trophy"></i>
+    </div>
+    <div>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <h3><span class="counter" data-counter="23">23</span>M</h3>
+        <h5>Awards received</h5>
+    </div>
+ </div>
+</section>
+  
+<!--work-->
+
+<section class="work">
+    <h1 class="section_heading">My works</h1>
+    <div class="wrapper">
+        <div class="slider_wrapper">
+           <div class="icon_wrap">
+               <i class="fa fa-clip"></i>
+           </div>
+           <div class="slider">
+               <div class="slide">
+                   <p></p>
+               </div>
+           </div>
+        </div>
+        <div class="portfolio">
+            <div class="tabs">
+
+            </div> 
+        </div>
+        <div class="portfolio_wrapper">
+        <div class="item desgine">
+            <a href="#">
+                <image src="article-ph-3.png">
+            </a>
+        </div>
+        <div class="item frontend">
+            <a href="#">
+                <image src="article-ph-1.png">
+            </a>
+        </div>
+        <div class="item backend">
+            <a href="#">
+                <image src="article-ph-2.png">
+            </a>
+        </div>
+        <div class="item desgine">
+            <a href="#">
+                <image src="ph-2.png">
+            </a>
+        </div>
+        <div class="item desgine">
+            <a href="#">
+                <image src="ph-1.png">
+            </a>
+        </div>
+        <div class="item backend">
+            <a href="#">
+                <image src="ph-3.png">
+            </a>
+        </div>
+    </div>
+    </div>
+</section>
+
+<!--brand-->
+
+<section class="brand">
+    <div class="brands_wrapper">
+        <image src="jquery.png"></image>
+        <image src="jr.png"></image>
+        <image src="unique.png"></image>
+        <image src="wp.png"></image>
+        <image src="am.png"></image>
+    </div>
+</section>
+
+<!--contact-->
+
+<section class="contact">
+    <h1 class="section_heading">Contact Me</h1>
+    <div class="wrapper">
+        <div class="left">
+            <div>
+                <i class="fa fa-phone"></i>
+                <div class="col">
+                    <h4>Feel Free To Contact Me:</h4>
+                    <span>+92-333-023-5820</span>
+                </div>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <div>
+                    <h4>Mail Me:</h4>
+                    <span>mohammad127313@gmail.com</span>
+                </div>
+            </div>
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <div>
+                    <h4>Where I Live ?:</h4>
+                    <span>xyz Road, Karchi Pakistan</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="right">
+            <form>
+               <div class="form_group">
+                   <div>
+                       <label for="">Name</label>
+                       <input type="text">
+                    </div>
+                    <div>
+                        <label for="">Email</label>
+                        <input type="email">
+                     </div>
+               </div>
+
+               <div class="form_group textarea_wrapper">
+                <div>
+                    <label for="">Message</label>
+                    <textarea name="" id="" cols="30" rows="6"></textarea>
+                 </div>
+            </div>
+            <button>
+                <a href=
+                "https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSDbSGrBzxghfVfrqWwsrdWFpj
+                RpGrKgjCpcTlZFcKVjHDsHcxBFpgjxbR
+                PnXKLCTDLWrvzg">send</button></a>
+
+            </form>
+        </div>
+    </div>
+</section>
+
+</main>
+  <footer class="container">
+      <span>Copyright 2020 - © Mak WebDeveloping</span>
+  </footer>
+
+</body>
+</html>
