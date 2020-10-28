@@ -3,24 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Main Web Header || Mak.com</title>
+    <title>Mak WebDeveloping</title>
     <link rel="stylesheet" href="style.css">
+    <!-- favicon starts -->
+    <link rel="shortcut icon" type="image/png" href="logo/mak_logo.jpg">
+    <!-- favicon ends ---->
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300;1,500;1,600&family=Poppins:ital,wght@0,500;0,600;0,700;1,500;1,600;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <!--contact-->
-  <!-- favicon starts -->
-    <link rel="shortcut icon" type="image/png" href="favicon.png">
-    <!-- favicon ends ---->
-
-<!---->
-
+<!--scroll-->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="scroll/jquery.tiltedpage-scroll.js"></script>
+<link rel="stylesheet" href="scroll/tiltedpage-scroll.css">
+<!--query-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+<!--query-end-->
   <!---css-->
             <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-
             MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPKFOJwJ8ERdknlPMO" crossorigin="anonymous">-->
     
                 
             <!-- JS, Popper.js, and jQuery -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Popper.js/1.14.3/umd/popper.min.js"></script>
         
@@ -39,9 +44,8 @@
 
     <!--contact-bootsrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
- <style>
-    :root{
+<style>
+   :root{
     --primary: crimson;
     --dark: #161616;
     --pure: #ffffff;
@@ -51,6 +55,7 @@
 body{
     font-family: 'Poppins', sans-serif;
 }
+
 *{
     margin: 0;
     padding: 0;
@@ -63,17 +68,21 @@ body{
 .fa{ color: #fff !important; text-decoration: none; }
 a{ color: #fff; text-decoration: none; }
 a:hover{ color: #fff; text-decoration: none; }
+.nbsp{
+    margin-right: 50%;
+}
 #header{
     width: 100%;
     height: 100vh;
-    /*background-image: linear-gradient(19deg, #111 0%, #222 84%);*/
-    background: #161616;
+    /*background: -webkit-linear-gradient(left, crimson, #222);*/
+    background-image: linear-gradient(19deg, #111 0%, #222 84%);
+    /*background: #161616;*/
     clip-path: polygon(100% 0%, 100% 77%, 50% 100%, 0 75%, 0 0);
     /*clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 95.3%, 0 100%);*/
     position: relative;
     overflow-x: hidden;
-    vertical-align: middle;
-border: 0;
+    /* veduio 
+    overflow: hidden;*/
 }
 /*background-image: linear-gradient(19deg, #1a52f9 0%, #b721ff 84%);*/
 #header:before{
@@ -86,6 +95,7 @@ border: 0;
     background-image: url('bg.jpg');
     background-size: 100% 100%;
     border-radius: 70%;
+    object-fit: cover;
 }
 nav{
     width: 100%;
@@ -98,9 +108,10 @@ nav{
 .logo{
     width: 40%;
     color: #fff;
-    background-image: linear-gradient(#111 40%, #222 60%);
+    /*background: -webkit-linear-gradient(left, crimson, #222);*/
+    /*background-image: linear-gradient(#111 40%, #222 60%);
     padding-left: 100px;
-    box-sizing: border-box;
+    box-sizing: border-box;*/
     cursor: pointer;
 }
 .logo a{
@@ -115,10 +126,10 @@ nav{
     color: #fff;
     text-decoration: none;
 }
-@keyframes logo-animate{
+/*@keyframes logo-animate{
     from{padding-left: 40px; }
     to {padding-right: 40px; }
-}
+}*/
 
 .scroll-btn{
     bottom: 30px;
@@ -126,12 +137,14 @@ nav{
     left: 50%;
     transform: translateX(-50%);
     border: 1px solid #fff;
+    /*border: 2px solid #111;*/
     padding: 10px 10px 20px;
     border-radius: 30px;
     cursor: pointer;
 }
 .scroll-bar span{
     border: 2px solid #fff;
+    /*border: 2px solid #111;*/
     font-size: 10px;
     border-radius: 30px;
 }
@@ -152,7 +165,7 @@ nav{
 .menu ul li{
     list-style: none;
     display: inline-block;
-    padding: 0 15px;]=
+    padding: 0 15px;
 }
 .menu ul li a{
     text-transform: capitalize;
@@ -161,23 +174,106 @@ nav{
 .active,ul li:hover{
     border-top: 2px solid #fff;
     border-bottom: 2px solid  #fff;
+    /*border-top: 2px solid  crimson;
+    border-bottom: 2px solid crimson;*/
     color: #fff; text-decoration: none;
 }
 .contact_btn a{
-  background-color: #333;
-  padding: 12px 26px;
-  font-size: 14px;
-  font-weight: 500;
-  border: 1px solid transparent;
-  text-transform: capitalize;
-  margin-right: 25px;
-  color: #fff; text-decoration: none;
-}
-.contact_btn a:hover{
-    background-image: linear-gradient(19deg, #222 0%, #111 84%);
+    /*background-color: #333;*/
+    /*background: -webkit-linear-gradient( crimson, #222);*/
+    background-image: linear-gradient(19deg, #111 0%, #222 84%);
+    padding: 12px 26px;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid transparent;
+    text-transform: capitalize;
+    margin-right: 25px;
     color: #fff; text-decoration: none;
+  }
+  .contact_btn a:hover{
+      background-image: linear-gradient(19deg, #222 0%, #111 84%);
+      /*background: -webkit-linear-gradient( #222, crimson);*/
+      color: #fff; text-decoration: none;
+  }
+  /*/////main contact //////*/
+  .a_{
+    position: relative;
+    width: 160px;
+    height: 50px;
+    line-height: 48px;
+    background: #000;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 4px;
+    text-decoration: none;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
 }
-
+.a_::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #fb0094, #00f, #0f0, #ff0, #f00);
+    background-size: 400%;
+    opacity: 0;
+    transition: 0.5s;
+    animation: animate 20s linear infinite;
+}
+.a_::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #fb0094, #00f, #0f0, #ff0, #f00);
+    background-size: 400%;
+    opacity: 0;
+    filter: blur(20px);
+    transition: 0.5s;
+    animation: animate 20s linear infinite;
+}
+.a_:hover::before,a:hover::after{
+    opacity: 1;
+}
+@keyframes animate{
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 300% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+}
+.a_ .span_a{
+    position: absolute;
+    display: block;
+    top: 1px;
+    left: 1px;
+    right: 1px;
+    bottom: 1px;
+    text-align: center;
+    background: #0c0c0c;
+    color: rgba(255,255,255,0.2);
+    transition: 0.5s;
+    z-index: 1;
+}
+.a_ .span_a:hover{
+    color: rgba(255, 255, 255, 1);
+}
+.a_ .span_a::before{
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 50%;
+   background: rgba(255,255,255,0.1);
+}
 /*------------center_content------------*/
 
 .center_content{
@@ -198,6 +294,7 @@ nav{
     margin-bottom: 10px;
     z-index: 1;
     font-weight: italic;
+    font-family: 'poppins';
 }
 .center_content h1:after{
     content: 'WELCOME TO MAK WEBDEVELOPING';
@@ -223,7 +320,6 @@ nav{
     font-size: 20px;
     font-weight: 500;
     color: #fff;
-    
     text-transform: capitalize;
     z-index: 1;
 }
@@ -235,7 +331,7 @@ nav{
     content: 'WebDevelopers';
     color: crimson;
     font-size: 40px;
-    animation: change_content 8s infinite linear;
+    animation: change_content 5s infinite linear;
 }
 @keyframes change_content{
     0%{ content: "Mohammad Abdullah"; }
@@ -259,6 +355,7 @@ nav{
     height: 40px;
     border-radius: 50%;
     background-image: linear-gradient(19deg, #222 0%, #111 84%);
+    /*background: -webkit-linear-gradient(left, crimson, #222);*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -270,6 +367,7 @@ nav{
 }
 .fa_icon:hover{
     background-image: linear-gradient(19deg, #111 0%, #222 84%);
+    /*background: -webkit-linear-gradient(left, #222, crimson);*/
     color: #fff; text-decoration: none;
 }
 .grid_sec{
@@ -305,7 +403,7 @@ nav{
     font-size: 30px;
     font-weight: bold;
 }
-.heading span{
+.who_span{
     color: crimson;
 }
 .content{
@@ -325,6 +423,8 @@ nav{
 img{
         max-width: 100%;
 }
+
+
 
 
 /*---services-----*/
@@ -368,115 +468,7 @@ img{
     font-size: 20px;
     font-weight: 600;
 }
-
-
-/*---testimonial---*/
-
-#testimonial{
-    background: #f7f7f7;
-    margin-top: 170px;
-    margin-bottom: 150px;
-}
-#testimonial .contant{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-#testimonial .contant .testimonialBx{
-    max-width: calc(50% - 40px);
-    padding: 60px 40px;
-    margin: 20px;
-    background: #2196f3;
-}
-#testimonial .contant .testimonialBx p{
-    color: #fff;
-    font-style: italic;
-    font-size: 16px;
-    font-weight: 300;
-}
-#testimonial .contant .testimonialBx h3{
-  margin-top: 40px;
-  text-align: end;
-  color: #fff;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 1em;
-}
-#testimonial .contant .testimonialBx h3 span{
-  font-size: 14px;
-  font-weight: 100;
-}
-#testimonial .contant .testimonialBx:hover{
-    background: black;
-    transition: 0.3s;
-}
-
-
-/*-------contact---------*/
-
-
-#contact{
-    background: #f4f3ff;
-}
-.copyright-txt{
-    font-weight: bold;
-    font-style: italic;
-    font-weight: 400;
-    text-transform: uppercase;
-    cursor: pointer;
-}
-
-/*-------footer-----*/
-.copyright-txt{
-    font-weight: bold;
-    font-style: italic;
-    font-weight: 400;
-    text-transform: uppercase;
-    text-align: center;
-    cursor: pointer;
-    color: #000;
-    padding: 10px;
-}
-.im_copyright{
-   text-align: center;
-}
-.contact hr{
-    margin-top: 50px;
-    background: #333;
-    margin-bottom: 50px;
-}
-
-/*---up btn start---*/
-
-#myBTn{
-    /*display: none;-------<-------in java----*/
-    position: fixed;
-    bottom: 20px;
-    right: 40px;
-    z-index: 99;
-    border: none;
-    color: #fff;
-    background: crimson;
-    padding: 10px;
-    border-radius: 10px;
-}
-#myBTn:hover{
-    background: #606060;
-}
-
-/*-----up btn end-------*/
-
-
-
-
-
-
-
-
-
-
-
-
+/*//////freelancer//////////*/
 section.freelancer{
     text-align: center;
     background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(camera.png);
@@ -772,27 +764,166 @@ form:hover .form-button button{
     font-size: 0.85rem;
 }
 
+
+/*------social-icons-------*/
+
+.social-icons{
+    top: 50%;
+    transform: translate(-0%);
+    position: sticky;
+    z-index: 1;
+    width: 80px;
+}
+.social-icons ul{
+    padding: initial;
+}
+
+.social-icons ul li{
+    height: 40px;
+    width: 40px;
+    list-style-type: none;
+    padding-left: 12px;
+    padding-top: 6px;
+    margin-top: 5px;
+    color: #fff;
+    background: crimson;
+}
+.social-icons ul li:hover{
+    padding-left: 30px;
+    width: 80px;
+    transition: 1s;
+}
+
+/*-------footer-----*/
+
+
+.footer{
+    background: #000;
+    color: #8a8a8a;
+    font-size: 16px;
+    padding: 20px 0 20px;
+}
+.footer p{
+    color: #8a8a8a;
+}
+.footer h3{
+    color: #fff;
+    margin-bottom: 20px;
+}
+.footer-col-3, ..footer-col-4{
+     flex-basis: 12%;
+     text-align: center;
+}
+ul{
+    list-style-type: none;
+}
+
+.app-logo{
+    margin-top: 20px;
+}
+.app-logo img{
+    width: 140px;
+    cursor: pointer;
+}
+.footer hr{
+    border: none;
+    background: #b5b5b5;
+    height: 1px;
+    margin: 20px 0;
+}
+.copyright__ h1:hover{
+    color: crimson;
+}
+.Copyright{
+    text-align: center;
+}
+.last_a{
+    color: crimson;
+    text-decoration: none;
+}
+.last_a:hover{
+    color: crimson;
+    text-decoration: none;
+}
+.last_span{
+    color: #b5b5b5;
+    text-decoration: none;
+}
+.last_span:hover{
+    color: #b5b5b5;
+    text-decoration: none;
+}
+.copyright__ span,.copyright__ span a,.last_a,.last_p{
+  color: crimson;
+  text-decoration: none;
+}
+.copyright__ span,.copyright__ span a,.last_a,.copyright__ .last_p{
+    color: crimson;
+    text-decoration: none;
+}
+.menu-icon{
+    width: 28px;
+    margin-left: 20px;
+    display: none;
+}
+
+.cart{
+    right: 15px;
+    left: 180px;
+}
+
+
+
+/*---up btn start---*/
+
+#myBTn{
+    /*display: none;-------<-------in java----*/
+    position: fixed !important;
+    bottom: 20px;
+    right: 40px;
+    z-index: 99;
+    border: none;
+    color: #fff;
+    background: crimson;
+    padding: 10px;
+    border-radius: 10px;
+}
+#myBTn:hover{
+    background: #606060;
+}
+
+
+
+
+ 
 </style>
-    
+
 </head>
 <body>
     <section id="header">
+        <!-- vedio stert --
+        <video autoplay loop class="vedio-bakground" muted plays-inline>
+            <source src="pages/bg.mp4"></video>
+        <!-- vedio ends --->
         <nav class="navbar">
            <div class="logo">
-               <a href="#">mak webdeveloping</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#">mak webdeveloping</a>
            </div>
+
            <div class="menu">
                <ul>
                    <li><a href="#" class="active">home</a></li>
                    <li><a href="#about">about</a></li>
                    <li><a href="#services">services</a></li>
                    <li><a href="#work">works</a></li>
-                   <li><a href="#blog">blog</a></li>
+                   <li><a href="#blog">blogs</a></li>
+                   <li><a href="../cv/index.html">CV</a></li>
                    <li><a href="#contact_us">conatct</a></li>
                </ul>
            </div>
            <div class="contact_btn">
-             <a href="#contact_us">contact us</a>
+            <a class="a_" href="#about"><span class="span_a">mak</span></a>
            </div>
         </nav>
         <div class="center_content">
@@ -803,22 +934,22 @@ form:hover .form-button button{
         
         <div class="social_network">
             <div class="fa_icon">
-                <a href="https://www.facebook.com/" target="_blank">
+                <a href="https://www.facebook.com/">
                     <i class="fa fa-facebook"></i>
                 </a>
             </div> 
             <div class="fa_icon">
-                <a href="https://www.instagram.com/dermalax.drbushra/" target="_blakn">
+                <a href="https://www.instagram.com/dermalax.drbushra/">
                     <i class="fa fa-instagram"></i>
                 </a>
             </div>
             <div class="fa_icon">
-                <a href="https://www.youtube.com/channel/UC1aBzmUhchLatKD5ImaVlNg" target="_blank">
+                <a href="https://www.youtube.com/channel/UC1aBzmUhchLatKD5ImaVlNg">
                     <i class="fa fa-youtube-play"></i>
                 </a>
             </div>
             <div class="fa_icon">
-                <a href="https://twitter.com/qwhm78" target="_blank">
+                <a href="https://twitter.com/qwhm78">
                     <i class="fa fa-twitter"></i>
                 </a>
             </div>
@@ -842,37 +973,95 @@ form:hover .form-button button{
          <!--about-->
         
     
-          <section id="about">
-            <div class="heading">
-                <h2>About <span>Me</span></h2>
+           <!--about-->
+<section id="about">
+
+    <div class="about container" id="about">
+        <div class="row">
+            <div class="col-md-6 text-center">
+               <image src="file:///C:/mh.html/html/website/w2/modern%20website/w4/web%20main/my%20web/pic-2.jpg" class="profile-img"></image>
             </div>
-            <div class="content">
-                <div class="contentBx w50">
-                    <br><br><br><br>
-                    <h3>Who Am I ?</h3>
-                    <p class="text-res">MakWebDeveloping website is all about creativity and innovative work in the field
-                        of Technology. We provide web development courses videos, MCS important
-                        videos and technology videos and articles. You will get all of my youtube videos
-                        source code and you are free to use it and make changes. Please give us your
-                        valuable feedback and suggestions. We appreciate your opinions and will use it
-                        to evaluate changes and make improvements on our blog.
-                        Here is my Youtube channel link :)MakWebDeveloping website is all about creativity and innovative work in the field
-                        of Technology. We provide web development courses videos, MCS important
-                        videos and technology videos and.</p>
-                </div>
-                <div class="w50">
-                    <image src="pic-2.jpg"></image>
-                </div>
-                  <!--upp start-->
-        <div class="scrolltop float-right">
+            <div class="col-md-6">
+                <div class="h4-1">
+                <h4><span class="who_span">WHO</span> AM I ?</h4>
+              </div>
+                <p>MakWebDeveloping website is all about creativity and innovative work in the field
+                  of Technology. We provide web development courses videos, important
+                  videos and technology videos and articles. You will get all of my youtube videos
+                  source code and you are free to use it and make changes. Please give us your
+                  valuable feedback and suggestions. We appreciate your opinions and will use it
+                  to evaluate changes and make improvements on our blog.
+                  Here is my <a href="https://www.youtube.com/channel/UC1aBzmUhchLatKD5ImaVlNg" target="_blank">
+                       Youtube </a>channel link :)
+                       &nbsp;&nbsp;&nbsp;
+                       <a href="https://www.youtube.com/channel/UC1aBzmUhchLatKD5ImaVlNg" target="_blank" class="hma">
+                      </a></p>
+              
+                  <div class="skills-bar">
+                      <p>Adobe Photoshop</p>
+                      <div class="progress">
+                          <div class="progress-bar" style="width: 80%;">80%</div>
+                      </div>
+
+                  
+
+                      <!---second-->
+
+                      <p>UI Desgine</p>
+                      <div class="progress">
+                          <div class="progress-bar" style="width: 73%;">73%</div>
+                      </div>
+
+                      <!--third-->
+
+                      <p>Wordpress</p>
+                      <div class="progress">
+                          <div class="progress-bar" style="width: 85%;">85%</div>
+                      </div>
+
+                      <!---fourth-->
+
+                      <p>Graphics Desgine</p>
+                      <div class="progress">
+                          <div class="progress-bar" style="width: 50%;">50</div>
+                      </div>
+
+                   
+
+                  </div>
+            
+              </div>
+        </div>
+    </div>
+
+</section>
+
+
+
+   <!--upp start-->     
+<section>
+         
+         <div class="scrolltop float-right">
             <a href="#header"><i class="fa fa-arrow-up" oneclick="topFunction()" id="myBTn"></i></a>
         </div>
-        <!--upp end---->
-
-            </div>
-        </section>
-
         
+</section>
+<!--upp end---->
+
+ <!---social icons---->
+
+ <div class="social-icons">
+    <ul>
+        <a href="https://www.instagram.com/qwhm78/"><li><i class="fa fa-instagram"></i></li></a>
+        <a href="https://twitter.com/qwhm78"><li><i class="fa fa-twitter"></i></li></a>
+        <a href="https://www.youtube.com/channel/UC1aBzmUhchLatKD5ImaVlNg"><li><i class="fa fa-youtube"></i></li></a>
+        <a href="#"><li><i class="fa fa-medium"></i></li></a>
+        <a href="#"><li><i class="fa fa-github"></i></li></a>
+        
+
+   </ul>
+</div>
+
       <!-------------services------------>
     
       <br><br><br><br><br>
@@ -1174,21 +1363,28 @@ form:hover .form-button button{
     </div>
 </section>
 
+<br><br>
+            <!---footer-->
+           <section class="footer">
+            <div class="footer">
+             
+                    <!--<hr>-->
 
-<script>
-    mybutton = document.getElementById("myBTn");
+                    <div class="copyright__">
+                   <p class="Copyright">© <span><a href="index.html">Mak WebDeveloping</a></span> 2020 By 
+                        <span><a href="#reviews">Mohammad Abdullah k</a></span>| Works, Blogs By 
+                        <span><a href="https://www.youtube.com/channel/UCo9xTRmg1SqQ5JSsA2fAgJw" >Coder's Gyan</a></span> |
+                            <span><a class="last_a" href="#reviews" class="last_a">Mak Tutorials</a></span></p>
+                         <center><a href="https://www.instagram.com/dermalax.drbushra/"><i class="fa fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+                                 <a href="https://twitter.com/qwhm78"><i class="fa fa-twitter"></i></a>
+                                 <a href="https://www.youtube.com/channel/UC1aBzmUhchLatKD5ImaVlNg"><i class="fa fa-youtube"></i></a></center>
+                                </p></div>
+                
+            </div>
+          </section>
 
-    window.onscroll = function() {scrollFunction()};
 
-    function scrollFunction() {
-        if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            mybutton.style.display = "block";
-            else {
-                mybutton.style.display = "none";
-            }
-        }
-    }
-</script>
 
 </body>
 </html>
