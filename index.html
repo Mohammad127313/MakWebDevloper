@@ -2,6 +2,7 @@
 <!-- {loader}() "on last of java" (also) "last nof this page" (also) "last nof this coding" -->
 <!-- {my things}{coding}() "on start of css" -->
 <!-- {header pic}() "after the  comment ('header pic start') " -->
+<!-- {links}() "on last of java" (also) "last nof this page" (also) "last nof this coding" -->
 
 <!DOCTYPE html>
 <html class='v2' dir='ltr' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
@@ -178,12 +179,7 @@ display: none;
 
 /* preloader start */
 
-
-
-/* preloader bg start */
-
 .preloader {
-background: linear-gradient(90deg, #111 10%, #222 90%);
 position: fixed;
 z-index: 1800;
 top: 0;
@@ -192,58 +188,72 @@ bottom: 0;
 left: 0;
 width: 100%;
 height: 100%;
+background: #fff
 }
-
-/* preloader bg end */
-
+.no-js #preloader,
+.oldie #preloader {
+display: none
+}
 .loader {
-height: 40px;
-width: 40px;
+position: relative;
+width: 2.5em;
+height: 2.5em;
+transform: rotate(165deg);
+}
+.loader {
 position: absolute;
-left: 50%;
-margin-left: -20px;
-top: 50%;
-margin-top: -20px;
+top: calc(50% - 1.25em);
+left: calc(50% - 1.25em);
 }
 .loader:before, .loader:after {
-content: "";
-height: 40px;
-width: 40px;
-border: 8px solid rgba(255, 255, 255, 0.5);
-border-radius: 10px;
+content: '';
 position: absolute;
-top: 0;
+top: 50%;
+left: 50%;
+display: block;
+width: 0.5em;
+height: 0.5em;
+border-radius: 0.25em;
+transform: translate(-50%, -50%);
 }
 .loader:before {
--webkit-animation: animate 2s infinite linear;
-animation: animate 2s infinite linear;
+animation: before 2s infinite;
 }
 .loader:after {
--webkit-animation: animate2 2s infinite linear;
-animation: animate2 2s infinite linear;
+animation: after 2s infinite;
 }
-@-webkit-keyframes animate {
+@keyframes before {
+0% {
+width: 0.5em;
+box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+}
+35% {
+width: 2.5em;
+box-shadow: 0 -0.5em rgba(225, 20, 98, 0.75), 0 0.5em rgba(111, 202, 220, 0.75);
+}
+70% {
+width: 0.5em;
+box-shadow: -1em -0.5em rgba(225, 20, 98, 0.75), 1em 0.5em rgba(111, 202, 220, 0.75);
+}
 100% {
--webkit-transform: rotate(180deg) skew(360deg);
-transform: rotate(180deg) skew(360deg);
+box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
 }
 }
-@keyframes animate {
+@keyframes after {
+0% {
+height: 0.5em;
+box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+}
+35% {
+height: 2.5em;
+box-shadow: 0.5em 0 rgba(61, 184, 143, 0.75), -0.5em 0 rgba(233, 169, 32, 0.75);
+}
+70% {
+height: 0.5em;
+box-shadow: 0.5em -1em rgba(61, 184, 143, 0.75), -0.5em 1em rgba(233, 169, 32, 0.75);
+}
 100% {
--webkit-transform: rotate(180deg) skew(360deg);
-transform: rotate(180deg) skew(360deg);
-}
-}
-@-webkit-keyframes animate2 {
-100% {
--webkit-transform: rotate(-180deg) skew(-360deg);
-transform: rotate(-180deg) skew(-360deg);
-}
-}
-@keyframes animate2 {
-100% {
--webkit-transform: rotate(-180deg) skew(-360deg);
-transform: rotate(-180deg) skew(-360deg);
+box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
 }
 }
 
@@ -6780,7 +6790,7 @@ article {
 <script type="text/javascript" src="https://www.blogger.com/static/v1/widgets/2095732370-widgets.js"></script>
 <script type='text/javascript'>
 window['__wavt'] = 'AOuZoY7xFIRVJJG-gCUX2gsmaCJP-w7FPg:1604374093338';_WidgetManager._Init('//www.blogger.com/rearrange?blogID\x3d8080800430936838229','//folio-soratemplates.blogspot.com/','8080800430936838229');
-_WidgetManager._SetDataContext([{'name': 'blog', 'data': {'blogId': '8080800430936838229', 'title': 'MakWebDeveloping', 'url': 'https://mohammad127313.github.io/MakWebDevloper/', 'canonicalUrl': 'https://mohammad127313.github.io/MakWebDevloper/', 'homepageUrl': 'https://mohammad127313.github.io/MakWebDevloper/', 'searchUrl': 'https://makwebdeveloping.com/', 'canonicalHomepageUrl': 'https://mohammad127313.github.io/MakWebDevloper/', 'MakWebDevelopingFaviconUrl': 'http://i.xp.io/1tCOwieW.png', 'bloggerUrl': 'https://mohammad127313.github.io/MakWebDevloper/', 'hasCustomDomain': false, 'httpsEnabled': true, 'enabledCommentProfileImages': true, 'gPlusViewType': 'FILTERED_POSTMOD', 'adultContent': false, 'analyticsAccountNumber': '', 'encoding': 'UTF-8', 'locale': 'en-GB', 'localeUnderscoreDelimited': 'en_gb', 'languageDirection': 'ltr', 'isPrivate': false, 'isMobile': false, 'isMobileRequest': false, 'mobileClass': '', 'isPrivateBlog': false, 'isDynamicViewsAvailable': true, 'feedLinks': '\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22Folio - Atom\x22 href\x3d\x22https://folio-soratemplates.blogspot.com/feeds/posts/default\x22 /\x3e\n\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/rss+xml\x22 title\x3d\x22Folio - RSS\x22 href\x3d\x22https://folio-soratemplates.blogspot.com/feeds/posts/default?alt\x3drss\x22 /\x3e\n\x3clink rel\x3d\x22service.post\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22Folio - Atom\x22 href\x3d\x22https://www.blogger.com/feeds/8080800430936838229/posts/default\x22 /\x3e\n', 'meTag': '', 'adsenseHostId': 'ca-host-pub-1556223355139109', 'adsenseHasAds': true, 'ieCssRetrofitLinks': '\x3c!--[if IE]\x3e\x3cscript type\x3d\x22text/javascript\x22 src\x3d\x22https://www.blogger.com/static/v1/jsbin/4244862144-ieretrofit.js\x22\x3e\x3c/script\x3e\n\x3c![endif]--\x3e', 'view': '', 'dynamicViewsCommentsSrc': '//www.blogblog.com/dynamicviews/4224c15c4e7c9321/js/comments.js', 'dynamicViewsScriptSrc': '//www.blogblog.com/dynamicviews/97b025341ebd1c4e', 'plusOneApiSrc': 'https://apis.google.com/js/plusone.js', 'disableGComments': true, 'sharing': {'platforms': [{'name': 'Get link', 'key': 'link', 'shareMessage': 'Get link', 'target': ''}, {'name': 'Facebook', 'key': 'facebook', 'shareMessage': 'Share to Facebook', 'target': 'facebook'}, {'name': 'BlogThis!', 'key': 'blogThis', 'shareMessage': 'BlogThis!', 'target': 'blog'}, {'name': 'Twitter', 'key': 'twitter', 'shareMessage': 'Share to Twitter', 'target': 'twitter'}, {'name': 'Pinterest', 'key': 'pinterest', 'shareMessage': 'Share to Pinterest', 'target': 'pinterest'}, {'name': 'Email', 'key': 'email', 'shareMessage': 'Email', 'target': 'email'}], 'disableGooglePlus': true, 'googlePlusShareButtonWidth': 300, 'googlePlusBootstrap': '\x3cscript type\x3d\x22text/javascript\x22\x3ewindow.___gcfg \x3d {\x27lang\x27: \x27en_GB\x27};\x3c/script\x3e'}, 'hasCustomJumpLinkMessage': false, 'jumpLinkMessage': 'Read more', 'pageType': 'index', 'pageName': '', 'pageTitle': 'Folio'}}, {'name': 'features', 'data': {'sharing_get_link_dialog': 'true', 'sharing_native': 'false'}}, {'name': 'messages', 'data': {'edit': 'Edit', 'linkCopiedToClipboard': 'Link copied to clipboard', 'ok': 'OK', 'postLink': 'Post link'}}, {'name': 'template', 'data': {'name': 'custom', 'localizedName': 'Custom', 'isResponsive': false, 'isAlternateRendering': false, 'isCustom': true}}, {'name': 'view', 'data': {'classic': {'name': 'classic', 'url': '?view\x3dclassic'}, 'flipcard': {'name': 'flipcard', 'url': '?view\x3dflipcard'}, 'magazine': {'name': 'magazine', 'url': '?view\x3dmagazine'}, 'mosaic': {'name': 'mosaic', 'url': '?view\x3dmosaic'}, 'sidebar': {'name': 'sidebar', 'url': '?view\x3dsidebar'}, 'snapshot': {'name': 'snapshot', 'url': '?view\x3dsnapshot'}, 'timeslide': {'name': 'timeslide', 'url': '?view\x3dtimeslide'}, 'isMobile': false, 'title': 'Folio', 'description': '', 'url': 'https://folio-soratemplates.blogspot.com/', 'type': 'feed', 'isSingleItem': false, 'isMultipleItems': true, 'isError': false, 'isPage': false, 'isPost': false, 'isHomepage': true, 'isArchive': false, 'isLabelSearch': false}}]);
+_WidgetManager._SetDataContext([{'name': 'blog', 'data': {'blogId': '8080800430936838229', 'title': 'MakWebDeveloping', 'url': 'https://mohammad127313.github.io/MakWebDevloper/', 'canonicalUrl': 'https://mohammad127313.github.io/MakWebDevloper/', 'homepageUrl': 'https://mohammad127313.github.io/MakWebDevloper/', 'searchUrl': 'https://makwebdeveloping.com/', 'canonicalHomepageUrl': 'https://mohammad127313.github.io/MakWebDevloper/', 'MakWebDevelopingFaviconUrl': 'http://i.xp.io/1tCOwieW.png', 'pageName': '', 'pageTitle': 'MakWebDeveloping', 'bloggerUrl': 'https://mohammad127313.github.io/MakWebDevloper/', 'hasCustomDomain': false, 'httpsEnabled': true, 'enabledCommentProfileImages': true, 'gPlusViewType': 'FILTERED_POSTMOD', 'adultContent': false, 'analyticsAccountNumber': '', 'encoding': 'UTF-8', 'locale': 'en-GB', 'localeUnderscoreDelimited': 'en_gb', 'languageDirection': 'ltr', 'isPrivate': false, 'isMobile': false, 'isMobileRequest': false, 'mobileClass': '', 'isPrivateBlog': false, 'isDynamicViewsAvailable': true, 'feedLinks': '\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22Folio - Atom\x22 href\x3d\x22https://folio-soratemplates.blogspot.com/feeds/posts/default\x22 /\x3e\n\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/rss+xml\x22 title\x3d\x22Folio - RSS\x22 href\x3d\x22https://folio-soratemplates.blogspot.com/feeds/posts/default?alt\x3drss\x22 /\x3e\n\x3clink rel\x3d\x22service.post\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22Folio - Atom\x22 href\x3d\x22https://www.blogger.com/feeds/8080800430936838229/posts/default\x22 /\x3e\n', 'meTag': '', 'adsenseHostId': 'ca-host-pub-1556223355139109', 'adsenseHasAds': true, 'ieCssRetrofitLinks': '\x3c!--[if IE]\x3e\x3cscript type\x3d\x22text/javascript\x22 src\x3d\x22https://www.blogger.com/static/v1/jsbin/4244862144-ieretrofit.js\x22\x3e\x3c/script\x3e\n\x3c![endif]--\x3e', 'view': '', 'dynamicViewsCommentsSrc': '//www.blogblog.com/dynamicviews/4224c15c4e7c9321/js/comments.js', 'dynamicViewsScriptSrc': '//www.blogblog.com/dynamicviews/97b025341ebd1c4e', 'plusOneApiSrc': 'https://apis.google.com/js/plusone.js', 'disableGComments': true, 'sharing': {'platforms': [{'name': 'Get link', 'key': 'link', 'shareMessage': 'Get link', 'target': ''}, {'name': 'Facebook', 'key': 'facebook', 'shareMessage': 'Share to Facebook', 'target': 'facebook'}, {'name': 'BlogThis!', 'key': 'blogThis', 'shareMessage': 'BlogThis!', 'target': 'blog'}, {'name': 'Twitter', 'key': 'twitter', 'shareMessage': 'Share to Twitter', 'target': 'twitter'}, {'name': 'Pinterest', 'key': 'pinterest', 'shareMessage': 'Share to Pinterest', 'target': 'pinterest'}, {'name': 'Email', 'key': 'email', 'shareMessage': 'Email', 'target': 'email'}], 'disableGooglePlus': true, 'googlePlusShareButtonWidth': 300, 'googlePlusBootstrap': '\x3cscript type\x3d\x22text/javascript\x22\x3ewindow.___gcfg \x3d {\x27lang\x27: \x27en_GB\x27};\x3c/script\x3e'}, 'hasCustomJumpLinkMessage': false, 'jumpLinkMessage': 'Read more', 'pageType': 'index', 'pageName': '', 'pageTitle': 'Folio'}}, {'name': 'features', 'data': {'sharing_get_link_dialog': 'true', 'sharing_native': 'false'}}, {'name': 'messages', 'data': {'edit': 'Edit', 'linkCopiedToClipboard': 'Link copied to clipboard', 'ok': 'OK', 'postLink': 'Post link'}}, {'name': 'template', 'data': {'name': 'custom', 'localizedName': 'Custom', 'isResponsive': false, 'isAlternateRendering': false, 'isCustom': true}}, {'name': 'view', 'data': {'classic': {'name': 'classic', 'url': '?view\x3dclassic'}, 'flipcard': {'name': 'flipcard', 'url': '?view\x3dflipcard'}, 'magazine': {'name': 'magazine', 'url': '?view\x3dmagazine'}, 'mosaic': {'name': 'mosaic', 'url': '?view\x3dmosaic'}, 'sidebar': {'name': 'sidebar', 'url': '?view\x3dsidebar'}, 'snapshot': {'name': 'snapshot', 'url': '?view\x3dsnapshot'}, 'timeslide': {'name': 'timeslide', 'url': '?view\x3dtimeslide'}, 'isMobile': false, 'title': 'Folio', 'description': '', 'url': 'https://folio-soratemplates.blogspot.com/', 'type': 'feed', 'isSingleItem': false, 'isMultipleItems': true, 'isError': false, 'isPage': false, 'isPost': false, 'isHomepage': true, 'isArchive': false, 'isLabelSearch': false}}]);
 _WidgetManager._RegisterWidget('_HeaderView', new _WidgetInfo('Header1', 'header', document.getElementById('Header1'), {}, 'displayModeFull'));
 _WidgetManager._RegisterWidget('_LinkListView', new _WidgetInfo('LinkList210', 'menu', document.getElementById('LinkList210'), {}, 'displayModeFull'));
 _WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML30', 'Header Title', document.getElementById('HTML30'), {}, 'displayModeFull'));
@@ -6791,7 +6801,7 @@ _WidgetManager._RegisterWidget('_PopularPostsView', new _WidgetInfo('PopularPost
 _WidgetManager._RegisterWidget('_LabelView', new _WidgetInfo('Label1', 'sidebar', document.getElementById('Label1'), {}, 'displayModeFull'));
 _WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML293', 'Featured Summary', document.getElementById('HTML293'), {}, 'displayModeFull'));
 _WidgetManager._RegisterWidget('_ContactFormView', new _WidgetInfo('ContactForm1', 'Contact Widget', document.getElementById('ContactForm1'), {'contactFormMessageSendingMsg': 'Sending...', 'contactFormMessageSentMsg': 'Your message has been sent.', 'contactFormMessageNotSentMsg': 'Message could not be sent. Please try again later.', 'contactFormInvalidEmailMsg': 'A valid email address is required.', 'contactFormEmptyMessageMsg': 'Message field cannot be empty.', 'title': 'Contact Form', 'blogId': '8080800430936838229', 'contactFormNameMsg': 'Name', 'contactFormEmailMsg': 'Email', 'contactFormMessageMsg': 'Message', 'contactFormSendMsg': 'Send', 'submitUrl': 'https://www.blogger.com/contact-form.do'}, 'displayModeFull'));
-_WidgetManager._RegisterWidget('_PageListView', new _WidgetInfo('PageList1', 'Bottom-menu', document.getElementById('PageList1'), {'title': 'Pages', 'links': [{'isCurrentPage': false, 'href': 'https://makwebdeveloping.com/p/about.html', 'id': '2298958999057142266', 'title': 'About'}, {'isCurrentPage': false, 'href': 'https://folio-soratemplates.blogspot.com/p/contact-us.html', 'id': '1850697708364910884', 'title': 'Contact Us'}], 'mobile': false}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_PageListView', new _WidgetInfo('PageList1', 'Bottom-menu', document.getElementById('PageList1'), {'title': 'Pages', 'links': [{'isCurrentPage': false, 'href': 'https://mohammad127313.github.io/MakWebDevloper/about', 'id': '2298958999057142266', 'title': 'About'}, {'isCurrentPage': false, 'href': 'https://folio-soratemplates.blogspot.com/p/contact-us.html', 'id': '1850697708364910884', 'title': 'Contact Us'}], 'mobile': false}, 'displayModeFull'));
 _WidgetManager._RegisterWidget('_LinkListView', new _WidgetInfo('LinkList236', 'Footer social widget', document.getElementById('LinkList236'), {}, 'displayModeFull'));
 </script>
 
