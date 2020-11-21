@@ -4364,12 +4364,17 @@ var pagenav_next = "Next";
 
 
 
+
+
+
+
+
 <!-- if you want txt start -->
 
 <br>
 
 <div class="logo_txt">
-    <a href="MakWebDeveloping.html" title="MakWebDeveloping Home">MAK</a> 
+    <a href="index.html" title="MakWebDeveloping Home">MAK</a> 
 </div>
 
 
@@ -6488,7 +6493,9 @@ $(document).ready(function() {
 <script>
 //<![CDATA[
 $(document).ready(function(){function relatedPost(g,e,r){$.ajax({url:"/feeds/posts/default/-/"+e+"?alt=json-in-script&max-results="+r,type:"get",dataType:"jsonp",success:function(t){for(var u="",h='<div class="related">',x=0;x<t.feed.entry.length;x++){for(var z=0;z<t.feed.entry[x].link.length;z++){if("alternate"==t.feed.entry[x].link[z].rel){u=t.feed.entry[x].link[z].href;break}}
+// no img pic here {start}
 var p=t.feed.entry[x].title.$t;var c=t.feed.entry[x].content.$t;var y=$('<div>').html(c);if(c.indexOf("http://www.youtube.com/embed/")>-1||c.indexOf("https://www.youtube.com/embed/")>-1){var d=t.feed.entry[x].media$thumbnail.url,m=d.replace('/default.jpg','/mqdefault.jpg'),k=m;}else if(c.indexOf("<img")>-1){var s=y.find('img:first').attr('src'),v=s.replace('s72-c','s600');var k=v;}else{var k='http://1.bp.blogspot.com/-eAeO-DYJDws/Vkqtj4HFBFI/AAAAAAAAB0o/Q5OLsyONXM0/s1600-r/nth.png';}
+/// no img pic  here {end}
 h+='<li><div class="related-thumb"><a class="related-img" href="'+u+'" style="background:url('+k+') no-repeat center center;background-size: cover"/></div><h3 class="related-title"><a href="'+u+'">'+p+'</a></h3></li>'}
 h+='</div>',g.html(h);}})}
 $("#related-posts").each(function(){var g=$(this),e=g.text(),r=3;relatedPost(g,e,r);});});
@@ -6727,6 +6734,112 @@ article {
             a.remove()
         }
     };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// sourcecode preloader {start}
+
+
+
+
+
+
+
     $.ias.defaults = {
         container: '.blog-posts',
         scrollContainer: $(window),
@@ -6745,6 +6858,111 @@ article {
         onRenderComplete: function() {},
         customLoaderProc: false
     };
+    
+
+
+
+
+
+
+/////// sourcecode preloader {end}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     $.ias.util = function() {
         var c = false;
         var d = false;
