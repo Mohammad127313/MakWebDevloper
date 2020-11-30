@@ -2,6 +2,7 @@
 
 
 
+
 <!-- {loader}() "on last of java" (also) "last nof this page" (also) "last nof this coding" -->
 <!-- {my things}{coding}() "on start of css" -->
 <!-- {header pic}() "after the  comment ('header pic start') " -->
@@ -6111,10 +6112,8 @@ upConfig(document.getElementById("ContactForm1"));' rel='nofollow' target='confi
 </div>
 </div>
                    
-               
-              
-                    
-       
+
+
 </div>
 <script>
 /*<![CDATA[*/
@@ -7227,6 +7226,91 @@ _WidgetManager._RegisterWidget('_ContactFormView', new _WidgetInfo('ContactForm1
 _WidgetManager._RegisterWidget('_PageListView', new _WidgetInfo('PageList1', 'Bottom-menu', document.getElementById('PageList1'), {'title': 'Pages', 'links': [{'isCurrentPage': false, 'href': 'https://makwebdeveloping.github.io/MakWebDevloper/', 'id': '02295703895614842579', 'title': 'MakWebDeveloping'}, {'isCurrentPage': false, 'href': 'https://folio-soratemplates.blogspot.com/p/contact-us.html', 'id': '1850697708364910884', 'title': 'Contact Us'}], 'mobile': false}, 'displayModeFull'));
 _WidgetManager._RegisterWidget('_LinkListView', new _WidgetInfo('LinkList236', 'Footer social widget', document.getElementById('LinkList236'), {}, 'displayModeFull'));
 </script>
+
+
+
+<!-- custom cursor start -->
+
+
+<style>
+    #cursor{
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        cursor: none;
+    }
+    .cursor1{
+        width: 50px;
+        height: 50px;
+        position: fixed;
+        transform: translate(-50%, -50%);
+        border: 1px solid #000;
+        border-radius: 50%;
+        pointer-events: none;
+        transition: all 200ms ease-out;
+    }
+    .cursor-inner{
+        width: 20px;
+        height: 20px;
+        background: #000;
+        position: fixed;
+        border-radius: 50%;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        transition: width .3s, height .3s;
+    }
+    .click{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        opacity: .5s;
+    }
+</style>
+<!-- styling end -->
+<div id="cursor"> 
+<div class="cursor1"></div>
+<div class="cursor-inner"></div>
+<!-- java start -->
+<script>
+    "use-strict";
+
+
+    var cursor = document.querySelector(".cursor1");
+    var cursorInner = document.querySelector(".cursor-inner");
+
+// start main
+
+    // cursor1
+    document.addEventListener("mousemove", function (e) {
+        var x = e.clientX;
+        var y = e.clientY;
+
+        cursor.style.left = x + "px";
+        cursor.style.top = y + "px";
+    })
+    // inner
+    document.addEventListener("mousemove", function (e) {
+        var x = e.clientX;
+        var y = e.clientY;
+
+        cursorInner.style.left = x + "px";
+        cursorInner.style.top = y + "px";
+    })
+// end main
+
+    document.addEventListener("mousedown", function() {
+        cursorInner.classList.add("click")
+    })
+    
+    document.addEventListener("mouseup", function() {
+        cursorInner.classList.remove("click")
+    })
+</script>
+</div>   
+
+<!-- custom cursor end -->
+
+
 
 </body>
 </html>
