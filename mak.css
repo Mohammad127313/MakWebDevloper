@@ -297,11 +297,11 @@ html{
 .grid-item{
     border-radius: 0.4rem;
     overflow: hidden;
-    box-shadow: 0 3rem 6rem rgba(0,0,0,0.1);
+    box-shadow: 0 4rem 8rem rgba(0,0,0,0.5);
     transition: 0.2s;
 }
 .grid-item:hover{
-    box-shadow: 0 4rem 8rem rgba(0,0,0,0.5);
+    /* box-shadow: 0 4rem 8rem rgba(0,0,0,0.5); */
 }
 .card-img{
     display: block;
@@ -350,14 +350,6 @@ html{
 .card-btn:hover span,
 .card-btn:active span{
     margin-left: 1.5rem;
-}
-@media only screen and (max-width: 60em) {
-    #cards{
-        padding: 3rem;
-    }
-    .grid{
-        grid-gap: 3rem;
-    }
 }
 /* cards end */
 
@@ -555,9 +547,13 @@ footer a:hover{
 
 /* responsive website start */
 @media only screen and (max-width: 1140px){
+    .logo img{
+        width: 35%;
+    }
     .after_bg{
         background: #f0e0e0;
     }
+/* my end */
     .nav-list{
         flex-direction: column;
     }
@@ -602,10 +598,8 @@ footer a:hover{
     .thumbnail img {
         width: 300px;
     }    
-    .logo img{
-        width: 35%;
-    }
 }
+
 /* contact queries */
 @media (max-width: 991px) {
     .contact{
@@ -620,5 +614,14 @@ footer a:hover{
     .container .contactInfo,
     .contactForm{
         width: 100%;
+    }
+}
+/* card queries */
+@media only screen and (max-width: 60em) {
+    #cards{
+        padding: 3rem;
+    }
+    .grid{
+        grid-gap: 3rem;
     }
 }
