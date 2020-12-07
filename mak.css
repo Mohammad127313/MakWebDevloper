@@ -122,9 +122,10 @@ h1.h2,h3,strong,a{
 .after_bg{
     background: #ecd3d3;
     /* background: #f0e0e0; */
-    height: 100%;
-    padding-top: 120px;
-    padding-bottom: 110px;
+    height: 380px;
+    /* height: 100%; */
+    padding-top: 230px;
+    /* padding-bottom: 180px; */
 }
 
 .box-main{
