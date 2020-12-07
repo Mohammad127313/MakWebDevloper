@@ -120,8 +120,8 @@ h1.h2,h3,strong,a{
     height: 100vh;
 }
 .after_bg{
-    background: #ecd3d3;
-    /* background: #f0e0e0; */
+    /* background: #ecd3d3; */
+    background: #f0e0e0;
     height: 380px;
     /* height: 100%; */
     padding-top: 265px;
@@ -550,9 +550,6 @@ footer a:hover{
 @media only screen and (max-width: 1140px){
     .logo img{
         width: 35%;
-    }
-    .after_bg{
-        background: #f0e0e0;
     }
 /* my end */
     .nav-list{
