@@ -23,7 +23,17 @@ h1.h2,h3,strong,a{
     color: #000;
     text-decoration: none;
 }
-/*  */
+
+/* home into column code start */
+.box-main{
+    flex-direction: column-reverse;
+}
+.text-small, .text-big, .buttons, .social-icons{
+    text-align: center;
+}
+/* home into column code end */
+
+/* ---------------------------------------------- */
 .navbar{
    display: flex;
    align-items: center;
@@ -568,6 +578,9 @@ footer a:hover{
         flex-direction: column-reverse;
         max-width: 100%;
     }
+    .text-small, .text-big, .buttons, .social-icons{
+        text-align: center;
+    }
     /* home img into column code {end} */
     #search{
         width: 100%;
@@ -586,9 +599,6 @@ footer a:hover{
 /*  */
     .section{
         flex-direction: column-reverse;
-    }
-    .text-small, .text-big, .buttons, .social-icons{
-        text-align: center;
     }
     .paras{
         padding: 0px 0px;
