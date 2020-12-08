@@ -624,3 +624,20 @@ footer a:hover{
         grid-gap: 3rem;
     }
 }
+/* my card queries start */
+@media only screen and (max-width: 1020px) {
+    .grid{
+        width: 700px;
+    }
+}
+@media only screen and (max-width: 689px) {
+    .grid{
+        width: 475px;
+    }
+}
+@media only screen and (max-width: 280px) {
+    .grid{
+        width: 50px;
+        margin-right: 250px;
+    }
+}
