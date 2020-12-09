@@ -40,10 +40,10 @@
 <!-- prloader start -->
 <div id="loading"></div>
 <!-- prloader end -->
-<nav class="navbar background h-nav-resp" id="home">
+<nav class="navbar background h-nav-resp">
       <ul class="nav-list v-class-resp">
          <div class="logo"><img src="https://i.ibb.co/RBJdcwX/photo.jpg" alt="logo"></div>
-       <li><a href="#home" title="Home">Home</a></li>
+       <li><a href="#" title="Home">Home</a></li>
        <li><a href="#" title="About">About</a></li>
        <li><a href="#" title="Services">Services</a></li>
        <li><a href="#contact" title="Contact Me">Contact Me</a></li>
@@ -66,7 +66,180 @@
 <section class="after_bg firstSection">
     <div class="box-main">
         <div class="firstHalf">
-            <p class="text-big" style= "font-family: 'Righteous', cursive; color: #000;">Welcome to Mak</p>
+            <!-- <p class="text-big" style= "font-family: 'Righteous', cursive; color: #000;">Welcome to Mak</p> -->
+            <!--  -->
+            <style>
+              .animateWord div li{
+          font-weight: bold;
+          padding: 0 1rem;
+          height: 4.5rem;
+          margin-bottom: 4.5rem;
+          display: block;
+          text-align: center;
+          font-family: 'Righteous', cursive;
+          font-size: 30px;
+          margin-right: 120px;
+      }
+      .animateWord div{
+         overflow: hidden;
+         position: relative;
+         float: right;
+         height: 8rem;
+         padding-bottom: 1px;
+         margin-bottom: -1rem;
+      }
+      
+      .flip{
+          -webkit-animation: flip4 10s cubic-bezier(0.23, 1, 0.32, 1.2 ) infinite;
+          animation: flip4 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+      }
+      @-webkit-keyframes flip4{
+          0%{
+              margin-top: -360px;
+          }
+          5%{
+              margin-top: -270px;
+          }
+          25%{
+              margin-top: -270px;
+          }
+          30%{
+              margin-top: -180px;
+          }
+          50%{
+              margin-top: -180px;
+          }
+          55%{
+              margin-top: -90px;
+          }
+          75%{
+              margin-top: -90px;
+          }
+          80%{
+              margin-top: 0px;
+          }
+          99.99%{
+              margin-top: -360px;
+          }
+          100%{
+              margin-top: -270px;
+          }
+      }
+      @keyframes flip4{
+          0%{
+              margin-top: -360px;
+          }
+          5%{
+              margin-top: -270px;
+          }
+          25%{
+              margin-top: -270px;
+          }
+          30%{
+              margin-top: -180px;
+          }
+          50%{
+              margin-top: -180px;
+          }
+          55%{
+              margin-top: -90px;
+          }
+          75%{
+              margin-top: -90px;
+          }
+          80%{
+              margin-top: 0px;
+          }
+          99.99%{
+              margin-top: 0px;
+          }
+          100%{
+              margin-top: -270px;
+          }
+      }
+      @media only screen and (max-width: 1140px) {
+        .animateWord div li{
+          margin-right: 300px;
+        }
+      }
+      @media only screen and (max-width: 1051px) {
+        .animateWord div li{
+          margin-right: 270px;
+        }
+      }
+      @media only screen and (max-width: 954px) {
+        .animateWord div li{
+          margin-right: 235px;
+        }
+      }
+      @media only screen and (max-width: 906px) {
+        .animateWord div li {
+            margin-right: 220px;
+          }
+      }
+      @media only screen and (max-width: 853px) {
+        .animateWord div li{
+         margin-right: 180px;
+        }
+      }
+      @media only screen and (max-width: 743px) {
+        .animateWord div li{
+          margin-right: 155px;
+        }
+      }
+      @media only screen and (max-width: 681px) {
+        .animateWord div li{
+          margin-right: 136px;
+        }
+      }
+      @media only screen and (max-width: 655px) {
+        .animateWord div li{
+          margin-right: 116px;
+        }
+      }
+      @media only screen and (max-width: 575px) {
+        .animateWord div li{
+          margin-right: 90px;
+        }
+      }
+      @media only screen and (max-width: 513px) {
+        .animateWord div li{
+          margin-right: 65px;
+        }
+      }
+      @media only screen and (max-width: 469px) {
+        .animateWord div li{
+          margin-right: 50px;
+        }
+      }
+      @media only screen and (max-width: 429px) {
+        .animateWord div li{
+          margin-right: 40px;
+        }
+      }
+      @media only screen and (max-width: 398px) {
+        .animateWord div li{
+          margin-right: 20px;
+        }
+      }
+      @media only screen and (max-width: 363px) {
+        .animateWord div li{
+          margin-right: 30px;
+          font-size: 25px;
+        }
+      }
+          </style>
+         <h2 class="animateWord">
+          <div style="color: #000;">
+             <ul class="flip">
+                 <li>And many more:)</li>
+                 <li>Learn CSS</li>
+                 <li>Learn HTML</li>
+                 <li>Welcome to Mak</li>
+             </ul>
+          </div>
+      </h2>
+      <!--  -->
             <p class="text-small" style="color: #222;">Do You Want Free SourceCodes? I have got you covered. <u>Mak</u> gives <u>FREE</u> SourceCodes of Next Level Websites, Cool Projects ect. We make articles on Web Development, Web Designing, Social cause, ect. Mak wan ...</p>
             <div class="social-icons">
                  <a href="https://www.facebook.com/mohammad.abdullahk/" onclick="window.open(this.href, 'windowName', 'width=600, height=400, left=24, top=24, scrollbars, resizable'); return false;" rel="nofollow" target="_blank"><i style="background: #3b5998;" class="fa fa-facebook" title="facebook"></i></a>
