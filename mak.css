@@ -580,14 +580,17 @@ footer a:hover{
         display: block;
     }
 
-
+/* main home queries */
     .h-nav-resp{
         height: 72px;
     }
     .v-class-resp{
         opacity: 0;
     }
-/*  */
+    .navbar{
+        display: none;
+    }
+/* home queries end */
     .section{
         flex-direction: column-reverse;
     }
