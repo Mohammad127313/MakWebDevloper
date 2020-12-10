@@ -588,7 +588,7 @@ footer a:hover{
         opacity: 0;
     }
     .navbar{
-        display: none;
+        /* display: none; */
     }
 /* home queries end */
     .section{
