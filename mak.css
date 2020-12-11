@@ -567,7 +567,7 @@ footer a:hover{
     }
     /* home img into column code {start} */
     .box-main{
-        /* flex-direction: column; */
+        flex-direction: column;
         max-width: 100%;
     }
     .text-small, .text-big, .buttons, .social-icons{
@@ -589,7 +589,7 @@ footer a:hover{
         opacity: 0;
     }
     .navbar{
-        display: none;
+        /* display: none; */
     }
 /* home queries end */
     .section{
@@ -602,6 +602,13 @@ footer a:hover{
         width: 300px;
     }    
 }
+
+
+
+
+
+
+
 
 /* contact queries */
 @media (max-width: 991px) {
