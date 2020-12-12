@@ -34,6 +34,12 @@ h1.h2,h3,strong,a{
 
 
 
+/* utinities start */
+.welcome_color{
+    color: black;
+}
+/* utinities end */
+
 /* ---------------------------------------------- */
 .navbar{
    display: flex;
@@ -565,7 +571,7 @@ footer a:hover{
     .rightNav{
         text-align: center;
     }
-    /* home img into column code {start} */
+    /* center content main code {start} */
     .box-main{
         flex-direction: column;
         max-width: 100%;
@@ -573,7 +579,7 @@ footer a:hover{
     .text-small, .text-big, .buttons, .social-icons{
         text-align: center;
     }
-    /* home img into column code {end} */
+    /* center content main code {end} */
     #search{
         width: 100%;
     }
@@ -603,7 +609,20 @@ footer a:hover{
     }    
 }
 
-
+/* home responsive main start */
+@media only screen and (max-width: 771px) {
+    .secondHalf img{
+        display: none;
+    }
+    .after_bg{
+        background: url(photo.JPG);
+        background-size: cover;
+    }
+    .welcome_color{
+        color: white;
+    }
+}
+/* home responsive main end */
 
 
 
