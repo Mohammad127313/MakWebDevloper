@@ -615,7 +615,8 @@ footer a:hover{
         display: none;
     }
     .after_bg{
-        background: url(photo.JPG);
+/* background: url(photo.JPG); */
+	background: url(https://i.ibb.co/RBJdcwX/photo.jpg);
         background-size: cover;
     }
     .welcome_color{
