@@ -275,7 +275,7 @@
           <form>
             <h2><!-- Contact Form ---></h2>
               <div class="inputBox">
-                <input type="text" name="name" required="required" placeholder="Name*" />
+                <input type="name" name="name" required="required" placeholder="Name*" />
               </div>
               <br>
               <div class="inputBox">
@@ -283,11 +283,11 @@
               </div>
               <br>
               <div class="inputBox">
-                  <textarea required="required" placeholder="Message*"></textarea>
+                  <textarea placeholder="Message*" required="required"></textarea>
                 </div>
                 <br>
               <div class="inputBox">
-                <a href="index.html/#contact"><input style="cursor: pointer;" type="submit" value="Send"></a>
+              <input style="cursor: pointer;" type="submit" value="Send">
               </div>
             </form>
           </div>
@@ -359,8 +359,8 @@ this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
 
 // this is the spped of type js {start}
 var that = this;
-var delta = 100 - Math.random() * 50;
-// var delta = 300 - Math.random() * 100;
+// var delta = 100 - Math.random() * 50;
+var delta = 300 - Math.random() * 100;
 // this is the spped of type js {end}
 
 if (this.isDeleting) { delta /= 2; }
