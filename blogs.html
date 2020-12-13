@@ -357,8 +357,11 @@ if (this.isDeleting) {
 
 this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
 
+// this is the spped of type js {start}
 var that = this;
-var delta = 300 - Math.random() * 100;
+var delta = 100 - Math.random() * 50;
+// var delta = 300 - Math.random() * 100;
+// this is the spped of type js {end}
 
 if (this.isDeleting) { delta /= 2; }
 
@@ -385,14 +388,16 @@ for (var i=0; i<elements.length; i++) {
     new TxtRotate(elements[i], JSON.parse(toRotate), period);
   }
 }
-// INJECT CSS
+// INJECT CSS --|-- this line is of "|" in the end
 var css = document.createElement("style");
 css.type = "text/css";
-css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666; }";
 document.body.appendChild(css);
 };
 </script>
 <!-- type js end -->
+
+
 
 
 
