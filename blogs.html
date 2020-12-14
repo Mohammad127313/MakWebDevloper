@@ -57,9 +57,10 @@
     <!-- nav font end -->  
 
   </head>
-  <body onload="myFunction()">
+  <body>
 <!-- prloader start -->
-<!-- <div id="loading"></div> -->
+<!-- onload="myFunction()" ||||  this is on body -->
+<div class="loading" id="loading"></div>
 <!-- prloader end -->
 
 
@@ -308,26 +309,19 @@
   </center>
 </footer>
 
+<!--------------------------------------------------------->
+
+
+
 <!-- preloader javascript start -->
-<script type="text/Javascript">
-    // $(document).ready(function(){
-        // 	$('div#loading').removeAttr('id');
-        // });
-    var preloader = document.getElementById("loading");
-    // window.addEventListener('load', function(){
-    // 	preloader.style.display = 'none';
-    // 	})
-
-    function myFunction(){
-        preloader.style.display = 'none';
-    };
-</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        setTimeout(function(){
+            $('.loading').fadeToggle();  
+        }, 500);
+      // }, 1500);
+    </script>
 <!-- prloader javascript end -->
-
-
-
-
-
 
 
 
@@ -409,7 +403,7 @@ document.body.appendChild(css);
   burger = document.querySelector('.burger')
   navbar = document.querySelector('.navbar')
   nav-list = document.querySelector('.nav-list')
-rightNav = document.querySelector('.rightNav')
+  rightNav = document.querySelector('.rightNav')
 
 
 
