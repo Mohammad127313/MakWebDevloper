@@ -8,7 +8,7 @@ html{
     scroll-behavior: smooth;
 }
 
-#loading{
+.loading, #loading{
 	position: fixed;
 	width: 100%;
 	height: 100vh;
@@ -41,6 +41,8 @@ h1.h2,h3,strong,a{
 /* utinities end */
 
 /* ---------------------------------------------- */
+
+
 .navbar{
    display: flex;
    align-items: center;
@@ -50,7 +52,8 @@ h1.h2,h3,strong,a{
 }
 
 .logo{
-    width: 20%;
+    margin-right: 10px;
+    margin-left: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
