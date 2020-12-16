@@ -9,8 +9,8 @@
     name='description' />
   <!-- facebook start -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Free SourceCodes, Courses, Latest Webdevelopment Articles" />  <!-- for facebook -->
-  <meta property="og:site_name" content="Mak" />  <!-- for normal -->
+  <meta property="og:title" content="Free SourceCodes, Courses, Latest Webdevelopment Articles" /> <!-- for facebook -->
+  <meta property="og:site_name" content="Mak" /> <!-- for normal -->
   <meta property="og:url" content="https://mohammadabdullahk.github.io/Mak-Web-Developing/blogs" />
   <meta property="og:image" content="https://i.ibb.co/CJ6YsjQ/og-2.jpg" />
   <meta content='mohammad.abdullahk' property='fb:admins' />
@@ -103,26 +103,42 @@
       </div>
       <div class="firstHalf">
         <!-- <p class="text-big welcome_color" style="font-family: 'Righteous', cursive;">Welcome to Mak</p> -->
+        
         <!--  -->
         <style>
-          .type-js h1{
+          .type-js h1 {
             font-size: 3.5em;
             text-align: center;
             font-family: 'Righteous', cursive;
           }
 
-          .type-js-blink{
+          .type-js-blink {
             color: #666;
-            font-weight: 300;
+            font-weight: lighter;
+            opacity: 1;
+            animation: type-js-blink 0.7s infinite;
+          }
+          @keyframes type-js-blink {
+            0% {
+              opacity: 0
+            }
+            49% {
+              opacity: 0
+            }
+            50% {
+              opacity: 1
+            }
           }
         </style>
         <div class="type-js">
           <h1 class="welcome_color">
             <span class="txt-rotate" data-period="2000"
-              data-rotate='[ "Welcome to Mak", "Learn Python", "Learn HTML", "Learn CSS", "and many more :)" ]'></span>  <span class="type-js-blink">|</span>
+              data-rotate='[ "Welcome to Mak", "Learn Python", "Learn HTML", "Learn CSS", "and many more :)" ]'></span>
+            <span class="type-js-blink">|</span>
           </h1>
         </div>
         <!--  -->
+
         <p class="text-small welcome_color" style="">Do You Want Free SourceCodes? I have got you covered. <u>Mak</u>
           gives <u>FREE</u> SourceCodes of Next Level Websites, Cool Projects ect. We make articles on Web Development,
           Web Designing, Social cause, ect. Mak wan ...</p>
@@ -356,7 +372,8 @@
     </center>
   </footer>
 
-  <!--------------------------------------------------------->
+<!--------------------------------------------------------->
+
 
 
 
@@ -463,6 +480,6 @@
   </script>
   <!-- resp menu javascript end -->
 
-</body>
 
+</body>
 </html>
