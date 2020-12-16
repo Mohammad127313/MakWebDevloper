@@ -119,14 +119,11 @@
             animation: type-js-blink 0.7s infinite;
           }
           @keyframes type-js-blink {
-            0% {
-              opacity: 0
-            }
-            49% {
-              opacity: 0
-            }
             50% {
-              opacity: 1
+              opacity: 0
+            }
+            80% {
+              opacity: .5
             }
           }
         </style>
@@ -449,7 +446,6 @@
       // INJECT CSS --|-- this line is of "|" in the end
       var css = document.createElement("style");
       css.type = "text/css";
-      css.innerHTML = ".txt-rotate > .wrap {  }";
       // css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666; }";
       document.body.appendChild(css);
     };
