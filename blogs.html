@@ -129,7 +129,7 @@
           <h1 class="welcome_color">
             <span class="txt-rotate" data-period="2000"
               data-rotate='[ "Welcome to Mak", "Learn Python", "Learn HTML", "Learn CSS", "and many more :)" ]'></span>
-            <span class="type-js-blink">|</span>
+            <!-- <span class="type-js-blink">|</span> -->
           </h1>
         </div>
         <!--  -->
@@ -444,7 +444,7 @@
       // INJECT CSS --|-- this line is of "|" in the end of type js
       var css = document.createElement("style");
       css.type = "text/css";
-      // css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666; }";
+      css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666; }";
       document.body.appendChild(css);
     };
   </script>
