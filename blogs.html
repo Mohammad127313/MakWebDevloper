@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,8 @@
     name='description' />
   <!-- facebook start -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Free SourceCodes, Courses, Latest Webdevelopment Articles" /> <!-- for facebook {social} -->
+  <meta property="og:title" content="Free SourceCodes, Courses, Latest Webdevelopment Articles" />
+  <!-- for facebook {social} -->
   <meta property="og:site_name" content="Mak" /> <!-- for normal -->
   <meta property="og:url" content="https://mohammadabdullahk.github.io/Mak-Web-Developing/blogs" />
   <meta property="og:image" content="https://i.ibb.co/CJ6YsjQ/og-2.jpg" />
@@ -62,6 +64,7 @@
   <!-- nav font end -->
 
 </head>
+
 <body onload="myFunction()">
   <!-- prloader start -->
   <div class="loading" id="loading"></div>
@@ -102,7 +105,7 @@
       </div>
       <div class="firstHalf">
         <!-- <p class="text-big welcome_color" style="font-family: 'Righteous', cursive;">Welcome to Mak</p> -->
-        
+
         <!--  -->
         <style>
           .type-js h1 {
@@ -117,10 +120,12 @@
             opacity: 1;
             animation: type-js-blink 0.7s infinite;
           }
+
           @keyframes type-js-blink {
             50% {
               opacity: 0
             }
+
             80% {
               opacity: .5
             }
@@ -147,12 +152,15 @@
           <a href="https://twitter.com/Mohamma70736799"><i style="background: #00aced;" class="fa fa-twitter"
               title="twitter"></i></a>
         </div>
+        <!-- home buttons start -->
         <div class="buttons">
-          <a href="https://mohammadabdullahk.github.io/Mak-Web-Developing/about%20.html"><button class="btn buttons"
+          <a href="https://mohammadabdullahk.github.io/Mak-Web-Developing/about%20"><button class="btn buttons"
               style="background: #1f83ee;" title="About">About</button></a>
-          <a href="https://mohammadabdullahk.github.io/Mak-Web-Developing/SourceCode-Page-1.html"><button
+
+          <a href="https://mohammadabdullahk.github.io/Mak-Web-Developing/SourceCode-Page-1"><button
               class="btn buttons" style="background: #24b345;" title="SourceCodes">SourceCodes</button></a>
-          <a href="https://mohammadabdullahk.github.io/Mak-Web-Developing/contact.html"><button class="btn buttons"
+
+          <a href="https://mohammadabdullahk.github.io/Mak-Web-Developing/contact"><button class="btn buttons"
               style="background: #d64a58;" title="Contact">Contact</button></a>
         </div>
       </div>
@@ -368,7 +376,7 @@
     </center>
   </footer>
 
-<!--------------------------------------------------------->
+  <!--------------------------------------------------------->
 
 
 
@@ -475,6 +483,89 @@
   </script>
   <!-- resp menu javascript end -->
 
+
+
+
+<!-- custom cursor start   -->
+  <div id="cursor">
+    <div class="cursor1"></div>
+    <div class="cursor-inner"></div>
+  </div>
+
+  <style type="text/css">
+    body {
+      cursor: none;
+    }
+
+    #cursor {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      cursor: none;
+    }
+
+    .cursor1 {
+      width: 50px;
+      height: 50px;
+      position: fixed;
+      transform: translate(-50%, -50%);
+      border: 1px solid gray;
+      border-radius: 50%;
+      pointer-events: none;
+      transition: all 200ms ease-out;
+    }
+
+    .cursor-inner {
+      width: 20px;
+      height: 20px;
+      background: #343a40;
+      position: fixed;
+      border-radius: 50%;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      transition: width .3s, height .3s;
+    }
+
+    .click {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      opacity: .5s;
+    }
+  </style>
+
+  <script type="text/javascript">
+    "use-strict";
+
+    var cursor = document.querySelector(".cursor1");
+    var cursorInner = document.querySelector(".cursor-inner");
+
+
+    document.addEventListener("mousemove", function (e) {
+      var x = e.clientX;
+      var y = e.clientY;
+
+      cursor.style.left = x + "px";
+      cursor.style.top = y + "px";
+    })
+
+    document.addEventListener("mousemove", function (e) {
+      var x = e.clientX;
+      var y = e.clientY;
+
+      cursorInner.style.left = x + "px";
+      cursorInner.style.top = y + "px";
+    })
+
+
+    document.addEventListener("mousedown", function () {
+      cursorInner.classList.add("click")
+    })
+
+    document.addEventListener("mouseup", function () {
+      cursorInner.classList.remove("click")
+    })
+  </script>
 
 </body>
 </html>
