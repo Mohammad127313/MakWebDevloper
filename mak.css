@@ -614,16 +614,18 @@ footer a:hover{
 
 /* home responsive main start */
 @media only screen and (max-width: 771px) {
-    .secondHalf img{
+    /* .secondHalf img{
         display: none;
     }
     .after_bg{
-        /* background: url(photo.JPG); */
-        background: url(https://i.ibb.co/RBJdcwX/photo.jpg);
+        background: url(photo.png);
         background-size: cover;
     }
     .welcome_color{
         color: white;
+    } */
+    #cursor{
+        display: none;
     }
 }
 /* home responsive main end */
