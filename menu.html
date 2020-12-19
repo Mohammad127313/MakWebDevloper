@@ -107,6 +107,33 @@
             transition: transform .4s linear;
         }
 
+        #search {
+            padding: 5px;
+            font-size: 17px;
+            outline: none;
+            border-radius: 9px;
+            outline: none;
+        }
+        #search:hover, #search:focus{
+            border-color: #d64a58;
+        }
+        .btn-sm {
+            margin: 7px 0;
+            border: none;
+            color: #fff;
+            text-decoration: none;
+            background: #d64a58;
+            border-radius: 8px;
+            font-size: 16px;
+            margin-top: 20px;
+            outline: none;
+            cursor: pointer;
+            padding: 6px 10px;
+        }
+        .btn-sm:hover{
+            opacity: 0.7;
+        }
+
         /*  */
 
         label #btn,
@@ -188,7 +215,12 @@
             <li><a href="#">Blogs</a></li>
             <li><a href="#">SourceCodes</a></li>
             <li><a href="#">Contact Me</a></li>
+            <form action="Search-Results.html" class="search-form" method="GET">
+                <input type="text" name="query" id="search" placeholder="search ..." title="Search Here">
+                <button class="btn-sm" title="Search">Search</button>
+            </form>
         </ul>
+
     </nav>
 </body>
 
