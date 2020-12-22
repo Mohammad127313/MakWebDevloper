@@ -17,6 +17,11 @@ html{
 	 no-repeat center center;	
 	z-index: 99999;
 }
+@media only screen and (max-width: 879px) {
+    .loading, #loading{
+        background: #fff url('https://i.ibb.co/fDmrFd6/oie-oie-animation-1.gif') no-repeat center center;
+    }
+}
 
 h1.h2,h3,strong,a{
     color: #000;
@@ -151,7 +156,13 @@ h1.h2,h3,strong,a{
     /* height: 100%; */
     padding-top: 265px;
     /* padding-bottom: 180px; */
+    overflow: hidden;
+    transition: all .1s linear; 
 }
+/* .after_bg:hover{
+    transform: scale(1.1);
+    overflow: hidden;
+} */
 
 .box-main{
     display: flex;
@@ -285,6 +296,10 @@ h1.h2,h3,strong,a{
     margin-top: 19px;
     margin-right: 25px;
     vertical-align: middle;
+    transition: all 0.5s linear;
+}
+.thumbnail img:hover{
+    transform: scale(1.1);
 }
 
 /* blogs ends here */
@@ -628,6 +643,10 @@ footer a:hover{
     .after_bg{
         background: url(photo.png);
         background-size: cover;
+    }
+    .navbar{
+        background-image: url(photo.png);
+        background-position: top;
     }
     .welcome_color{
         color: white;
