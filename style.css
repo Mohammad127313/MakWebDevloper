@@ -172,6 +172,7 @@ h1.h2, h3, strong, a {
     padding-top: 265px;
     /* padding-bottom: 180px; */
     overflow: hidden;
+    background-attachment: fixed;
     /* transition: all .1s linear; */
 }
 
@@ -669,7 +670,7 @@ footer a:hover {
         display: none;
     }
     .after_bg {
-        background: url(photo.png);
+        background: url(https://i.ibb.co/xX5y3dD/mak-1.jpg);
         background-size: cover;
     }
     .welcome_color {
