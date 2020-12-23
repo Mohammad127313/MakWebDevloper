@@ -47,7 +47,7 @@ h1.h2, h3, strong, a {
 /* utinities start */
 
 .welcome_color {
-    color: black;
+    color: white;
 }
 
 /* utinities end */
@@ -165,14 +165,16 @@ h1.h2, h3, strong, a {
     /* background: #ecd3d3; */
     /* background: #f0e0e0; */
     /* background: rgb(222, 222, 231); */
-    background-image: url(https://i.ibb.co/9NhQWRm/banner-mak.jpg);
+    background-image: url(https://i.ibb.co/9V1z8BQ/pexels-paras-katwal-4218883.jpg);
+    /* background-image: url(https://i.ibb.co/9NhQWRm/banner-mak.jpg); */
     background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     height: 380px;
     /* height: 100%; */
     padding-top: 265px;
     /* padding-bottom: 180px; */
     overflow: hidden;
-    background-attachment: fixed;
     /* transition: all .1s linear; */
 }
 
@@ -670,8 +672,9 @@ footer a:hover {
         display: none;
     }
     .after_bg {
-        background: url(https://i.ibb.co/xX5y3dD/mak-1.jpg);
+        background: url(https://i.ibb.co/9V1z8BQ/pexels-paras-katwal-4218883.jpg);
         background-size: cover;
+        /* background-position: center; */
     }
     .welcome_color {
         color: white;
