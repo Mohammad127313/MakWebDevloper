@@ -49,7 +49,12 @@ h1.h2, h3, strong, a {
 .welcome_color {
     color: white;
 }
-
+.f-s-18{
+    font-size: 18px;
+}
+.center{
+    text-align: center;
+}
 /* utinities end */
 
 /* ---------------------------------------------- */
@@ -172,6 +177,7 @@ h1.h2, h3, strong, a {
     background-position: center;
     background-attachment: fixed;
     height: 430px;
+    /* height: 340px; */
     /* height: 100%; */
     padding-top: 265px;
     /* padding-bottom: 180px; */
@@ -226,7 +232,7 @@ h1.h2, h3, strong, a {
 
 .text-small {
     font-size: 18px;
-    color: #222;
+    /* color: #222; */
 }
 
 .social-icons {
@@ -673,13 +679,15 @@ footer a:hover {
         display: none;
     }
     .after_bg {
-        background: url(https://i.ibb.co/9V1z8BQ/pexels-paras-katwal-4218883.jpg);
+        background: url(https://i.ibb.co/BCd9Rg0/pexels-pixabay-273238.jpg);
+        /* background: url(https://i.ibb.co/9V1z8BQ/pexels-paras-katwal-4218883.jpg); */
         /* background: url(https://i.ibb.co/RBJdcwX/photo.jpg); */
         background-size: cover;
+        background-position: center;
         /* background-position: center; */
     }
     .welcome_color {
-        color: white;
+        color: black;
     }
     #cursor {
         display: none;
