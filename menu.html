@@ -24,12 +24,12 @@
     <link href='https://plus.google.com/+Mak' rel='publisher' />
     <meta itemprop="description" name="" />
     <meta itemprop="image" content="" />
-   <!-- fav start -->
-   <link rel="apple-touch-icon icon" sizes="180x180" href="https://i.ibb.co/tb1rcB3/apple-touch-icon.png">
-   <link rel="icon" type="image/png" sizes="32x32" href="https://i.ibb.co/mqZ8VPP/favicon-32x32.png">
-   <link rel="icon" type="image/png" sizes="16x16" href="https://i.ibb.co/9vW3tvZ/favicon-16x16.png">
-   <link rel="manifest" href="https://mohammadabdullahk.github.io/Mak-Web-Developing/site.webmanifest">
-   <!-- fav end -->
+    <!-- fav start -->
+    <link rel="apple-touch-icon icon" sizes="180x180" href="https://i.ibb.co/tb1rcB3/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://i.ibb.co/mqZ8VPP/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://i.ibb.co/9vW3tvZ/favicon-16x16.png">
+    <link rel="manifest" href="https://mohammadabdullahk.github.io/Mak-Web-Developing/site.webmanifest">
+    <!-- fav end -->
     <link rel="me" href="https://www.blogger.com/profile/02295703895614842579" />
     <link rel="canonical" href="https://mohammadabdullahk.github.io/Mak-Web-Developing/menu" />
     <title>Menu - Mak</title>
@@ -40,9 +40,10 @@
     <!-- body {ubuntu} font family end -->
     <style>
         :root {
-            --main-color: #6c94bc;
-            --main-light-color: rgb(129, 162, 200);
-            --nav-color: #354a5f;
+            --main-color: #8a7a7d;
+            --main-light-color: #a39b9d;
+            --nav-color: #cac1c4;
+            --dark-color: #756d70;
         }
 
         * {
@@ -83,7 +84,7 @@
         nav ul li a {
             text-decoration: none;
             position: relative;
-            color: darkgray;
+            color: gray;
             font-size: 25px;
             padding: 5px 0;
             text-transform: capitalize;
@@ -108,7 +109,7 @@
         }
 
         nav ul li a:hover {
-            color: gray;
+            color: darkgray;
             transition: transform .4s linear;
         }
 
@@ -116,13 +117,21 @@
             padding: 5px;
             font-size: 17px;
             outline: none;
-            border-radius: 9px;
-            outline: none;
+            /* border-radius: 9px; */
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            background: transparent;
+            border-color: #8a7a7d;
+            transition: all .2s linear;
         }
 
-        #search:hover,
         #search:focus {
             border-color: var(--main-light-color);
+        }
+
+        .search-form ::placeholder {
+            color: rgb(61, 56, 56);
         }
 
         .btn-sm {
@@ -195,7 +204,7 @@
             position: absolute;
             width: 100%;
             height: 100vh;
-            background: #343a40;
+            background: var(--nav-color);
             top: 80px;
             left: 0;
             text-align: center;
