@@ -47,12 +47,14 @@ h1.h2, h3, strong, a {
 /* utinities start */
 
 .welcome_color {
-    color: white;
+    color: #000;
 }
-:root{
-    --main-color: #6c94bc;
-    --main-light-color: rgb(129, 162, 200);
-    --nav-color: #354a5f;
+
+:root {
+    --main-color: #8a7a7d;
+    --main-light-color: #a39b9d;
+    --nav-color: #cac1c4;
+    --dark-color: #756d70;
 }
 
 /* utinities end */
@@ -105,12 +107,12 @@ h1.h2, h3, strong, a {
 .nav-list li a {
     font-size: 17px;
     text-decoration: none;
-    color: darkgray;
+    color: gray;
     font-weight: bold;
 }
 
 .nav-list li a:hover {
-    color: gray;
+    color: rgb(158, 152, 152);
 }
 
 .rightNav {
@@ -123,11 +125,21 @@ h1.h2, h3, strong, a {
     padding: 5px;
     font-size: 17px;
     outline: none;
-    border-radius: 9px;
+    /* border-radius: 9px; */
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    background: transparent;
+    border-color: #8a7a7d;
+    transition: all .2s linear;
 }
 
 #search:focus {
     border-color: var(--main-light-color);
+}
+
+.search-form ::placeholder {
+    color: rgb(61, 56, 56);
 }
 
 .btn-sm {
@@ -146,12 +158,9 @@ h1.h2, h3, strong, a {
     outline: none;
     padding: 6px 10px;
 }
-.btn-sm:hover{
-    background: var(--main-light-color);
-}
 
-.search-form ::placeholder {
-    color: gray;
+.btn-sm:hover {
+    background: var(--main-light-color);
 }
 
 .background {
@@ -174,13 +183,14 @@ h1.h2, h3, strong, a {
     /* background: #ecd3d3; */
     /* background: #f0e0e0; */
     /* background: rgb(222, 222, 231); */
-    background-image: url(https://i.ibb.co/9V1z8BQ/pexels-paras-katwal-4218883.jpg);
+    background-image: url(https://i.ibb.co/BCd9Rg0/pexels-pixabay-273238.jpg);
+    /* background-image: url(https://i.ibb.co/9V1z8BQ/pexels-paras-katwal-4218883.jpg); */
     /* background-image: url(https://i.ibb.co/W6t5Pj3/pexels-bich-tran-669996.jpg); */
     /* background-image: url(https://i.ibb.co/9NhQWRm/banner-mak.jpg); */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    height: 430px;
+    height: 410px;
     /* height: 340px; */
     /* height: 100%; */
     padding-top: 265px;
@@ -275,7 +285,6 @@ h1.h2, h3, strong, a {
 .btn:hover {
     opacity: 0.8;
 }
-
 
 /* Home ends here */
 
@@ -558,11 +567,11 @@ html {
 /* footer start */
 
 footer {
-    background: var(--nav-color);
+    background: var(--dark-color);
 }
 
 footer a {
-    color: var(--main-color);
+    color: #c8bfc1;
 }
 
 footer a:hover {
