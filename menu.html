@@ -24,13 +24,12 @@
     <link href='https://plus.google.com/+Mak' rel='publisher' />
     <meta itemprop="description" name="" />
     <meta itemprop="image" content="" />
-    <!-- fav start -->
-    <!-- <link rel="apple-touch-icon" sizes="180x180" href="https://i.ibb.co/J2jMNSx/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="https://i.ibb.co/nDLYXVQ/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="https://i.ibb.co/sKmRgYk/favicon-16x16.png">
-  <link rel="manifest" href="https://mohammadabdullahk.github.io/Mak-Web-Developing/site.webmanifest"> -->
-    <link rel="icon" type="image/png" href="photo.png" />
-    <!-- fav end -->
+   <!-- fav start -->
+   <link rel="apple-touch-icon icon" sizes="180x180" href="https://i.ibb.co/tb1rcB3/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="https://i.ibb.co/mqZ8VPP/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="https://i.ibb.co/9vW3tvZ/favicon-16x16.png">
+   <link rel="manifest" href="https://mohammadabdullahk.github.io/Mak-Web-Developing/site.webmanifest">
+   <!-- fav end -->
     <link rel="me" href="https://www.blogger.com/profile/02295703895614842579" />
     <link rel="canonical" href="https://mohammadabdullahk.github.io/Mak-Web-Developing/menu" />
     <title>Menu - Mak</title>
@@ -40,6 +39,12 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap">
     <!-- body {ubuntu} font family end -->
     <style>
+        :root {
+            --main-color: #6c94bc;
+            --main-light-color: rgb(129, 162, 200);
+            --nav-color: #354a5f;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -52,7 +57,7 @@
 
         nav {
             height: 80px;
-            background: #343a40;
+            background: var(--nav-color);
         }
 
         nav img {
@@ -114,15 +119,18 @@
             border-radius: 9px;
             outline: none;
         }
-        #search:hover, #search:focus{
-            border-color: #d64a58;
+
+        #search:hover,
+        #search:focus {
+            border-color: var(--main-light-color);
         }
+
         .btn-sm {
             margin: 7px 0;
             border: none;
             color: #fff;
             text-decoration: none;
-            background: #d64a58;
+            background: var(--main-color);
             border-radius: 8px;
             font-size: 16px;
             margin-top: 20px;
@@ -130,8 +138,9 @@
             cursor: pointer;
             padding: 6px 10px;
         }
-        .btn-sm:hover{
-            opacity: 0.7;
+
+        .btn-sm:hover {
+            background: var(--main-light-color);
         }
 
         /*  */
@@ -208,7 +217,7 @@
             <i class="fas fa-bars" id="btn"></i>
             <a href="index.html"><i class="fas fa-times" id="cancel"></i></a>
         </label>
-        <a href="index.html"><img src="photo.png" alt="my image"></a>
+        <a href="index.html"><img class="logo" src="https://i.ibb.co/tb1rcB3/apple-touch-icon.png" alt="my image"></a>
         <ul>
             </li>
             <li><a href="index.html">Home</a></li>
@@ -223,4 +232,5 @@
         </ul>
     </nav>
 </body>
+
 </html>
