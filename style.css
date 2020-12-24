@@ -49,12 +49,12 @@ h1.h2, h3, strong, a {
 .welcome_color {
     color: white;
 }
-.f-s-18{
-    font-size: 18px;
+:root{
+    --main-color: #6c94bc;
+    --main-light-color: rgb(129, 162, 200);
+    --nav-color: #354a5f;
 }
-.center{
-    text-align: center;
-}
+
 /* utinities end */
 
 /* ---------------------------------------------- */
@@ -127,33 +127,37 @@ h1.h2, h3, strong, a {
 }
 
 #search:focus {
-    border-color: #d64a58;
+    border-color: var(--main-light-color);
 }
 
 .btn-sm {
+    margin-top: 26px;
     margin: 7px 0;
     border: none;
     color: #fff;
     text-decoration: none;
-    background: #d64a58;
+    /* background: #d64a58; */
+    background: var(--main-color);
     border-radius: 8px;
     font-size: 16px;
     margin-top: 20px;
     outline: none;
     cursor: pointer;
+    outline: none;
+    padding: 6px 10px;
+}
+.btn-sm:hover{
+    background: var(--main-light-color);
 }
 
 .search-form ::placeholder {
     color: gray;
 }
 
-.btn-sm:hover {
-    background: #e47782;
-}
-
 .background {
     /* background: rgba(0,0,0,0.7) url('https://i.ibb.co/9NhQWRm/banner-mak.jpg'); */
-    background-color: #343a40;
+    /* background-color: #343a40; */
+    background: var(--nav-color);
     background-size: cover;
     background-blend-mode: darken;
 }
@@ -272,9 +276,6 @@ h1.h2, h3, strong, a {
     opacity: 0.8;
 }
 
-.btn-sm {
-    padding: 6px 10px;
-}
 
 /* Home ends here */
 
@@ -314,7 +315,7 @@ h1.h2, h3, strong, a {
 }
 
 .sectionTag a:hover {
-    color: #d64a58;
+    color: var(--main-color);
 }
 
 .thumbnail img {
@@ -557,16 +558,16 @@ html {
 /* footer start */
 
 footer {
-    background: #3f474e;
+    background: var(--nav-color);
 }
 
 footer a {
-    color: #5f83d1;
+    color: var(--main-color);
 }
 
 footer a:hover {
-    /* text-decoration: underline; */
-    color: #3054a1d3;
+    text-decoration: underline;
+    color: var(--main-light-color);
 }
 
 .text-footer {
@@ -680,6 +681,7 @@ footer a:hover {
     }
     .after_bg {
         background: url(https://i.ibb.co/BCd9Rg0/pexels-pixabay-273238.jpg);
+        /* background: url(https://i.ibb.co/DPBZx4G/pic-6.jpg); */
         /* background: url(https://i.ibb.co/9V1z8BQ/pexels-paras-katwal-4218883.jpg); */
         /* background: url(https://i.ibb.co/RBJdcwX/photo.jpg); */
         background-size: cover;
@@ -687,7 +689,8 @@ footer a:hover {
         /* background-position: center; */
     }
     .welcome_color {
-        color: black;
+        /* color: #fff7f7; */
+        color: #000;
     }
     #cursor {
         display: none;
