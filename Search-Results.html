@@ -26,12 +26,12 @@
     <link href='https://plus.google.com/+Mak' rel='publisher' />
     <meta itemprop="description" name="" />
     <meta itemprop="image" content="" />
-    <!-- fav start -->
-    <link rel="apple-touch-icon" sizes="180x180" href="https://i.ibb.co/J2jMNSx/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://i.ibb.co/nDLYXVQ/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://i.ibb.co/sKmRgYk/favicon-16x16.png">
-    <link rel="manifest" href="https://mohammadabdullahk.github.io/Mak-Web-Developing/site.webmanifest">
-    <!-- fav end -->
+     <!-- fav start -->
+  <link rel="apple-touch-icon icon" sizes="180x180" href="https://i.ibb.co/tb1rcB3/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://i.ibb.co/mqZ8VPP/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://i.ibb.co/9vW3tvZ/favicon-16x16.png">
+  <link rel="manifest" href="https://mohammadabdullahk.github.io/Mak-Web-Developing/site.webmanifest">
+  <!-- fav end -->
     <link rel="me" href="https://www.blogger.com/profile/02295703895614842579" />
     <link rel="canonical" href="https://mohammadabdullahk.github.io/Mak-Web-Developing/Search-Results" />
 
@@ -70,30 +70,32 @@
 
 
     <nav class="navbar background h-nav-resp">
-        <!-- <div class="resp"> -->
-        <ul class="nav-list v-class-resp">
-          <!-- <div class="logo"><img src="photo.jpg" alt="logo"></div> -->
-          <div class="logo"><a href="index.html"><img src="https://i.ibb.co/RBJdcwX/photo.jpg" alt="logo"></a></div>
-          <li><a href="index.html" title="Home">Home</a></li>
-          <li><a href="#" title="About">About</a></li>
-          <li><a href="#" title="Services">Services</a></li>
-          <li><a href="#contact" title="Contact Me">Contact Me</a></li>
-        </ul>
-        <div class="rightNav v-class-resp">
-          <form action="Search-Results.html" class="search-form" role="search">
-            <input type="text" name="search" id="search" placeholder="search ..." title="Search Here">
-            <button class="btn-sm" title="Search">Search</button>
-          </form>
+      <!-- <div class="resp"> -->
+      <ul class="nav-list v-class-resp">
+        <div class="logo"><a href="index.html"><img src="https://i.ibb.co/tb1rcB3/apple-touch-icon.png" alt="logo"></a>
         </div>
-        </div>
-        <div class="burger">
-          <a href="menu.html">
+        <!-- <div class="logo"><a href="mak.html"><img src="https://i.ibb.co/RBJdcwX/photo.jpg" alt="logo"></a></div> -->
+        <li><a href="index.html" title="Home">Home</a></li>
+        <li><a href="#" title="Blogs">Blogs</a></li>
+        <li><a href="sourcecodes.html" title="SourceCodes">SourceCodes</a></li>
+        <li><a href="#" title="Contact Me">Contact Me</a></li>
+      </ul>
+      <div class="rightNav v-class-resp">
+        <form action="Search-Results.html" class="search-form" method="GET">
+          <input type="text" name="query" id="search" placeholder="search ..." title="Search Here" required />
+          <button class="btn-sm" title="Search">Search</button>
+          <!-- <a href="#audio" class="btn-sm audio-btn" title="Music">Music</a> -->
+        </form>
+      </div>
+      </div>
+      <div class="burger">
+        <a href="menu.html">
           <div class="line"></div>
           <div class="line"></div>
           <div class="line"></div>
-          </a>
-        </div>
-      </nav>
+        </a>
+      </div>
+    </nav>
     <!-- nav ends here -->
 
 <!-- main center content start -->
@@ -294,6 +296,53 @@
     <!-- resp menu javascript end -->
 
 
-</body>
 
+    
+
+
+    <!-- audio start -->
+    <audio id="audio" controls style="width: 97vw; outline: none;">
+      <source src="https://mohammadabdullahk.github.io/Mak-Web-Developing/elevate.mp3" type="audio/mp3">
+      <!-- <source src="file:///C:/Users/ali%20enterprises/Music/other/stick%20together.mp3" type="audio/mp3"> -->
+  </audio>
+  <!-- <p style="
+      font-size: 16px;
+      text-align: center;
+      font-family: system-ui;
+      margin-bottom: 15px;">
+      Music used from sound cloud
+    </p> -->
+  <style>
+      .audio-btn {
+          margin-left: 20px;
+      }
+
+      @media only screen and (max-width: 1335px) {
+          .search-form button {
+              margin-right: 74px;
+          }
+      }
+
+      @media only screen and (max-width: 1278px) {
+          .audio-btn {
+              margin-left: -43px;
+          }
+
+          .search-form button {
+              margin-right: 57px;
+          }
+      }
+
+      @media only screen and (max-width: 1283px) {
+          .audio-btn {
+              margin-left: -43px;
+          }
+
+          .search-form button {
+              margin-right: 64px;
+          }
+      }
+  </style>
+
+</body>
 </html>
