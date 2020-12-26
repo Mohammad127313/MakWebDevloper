@@ -56,15 +56,33 @@ h1.h2, h3, strong, a {
     --nav-color: #cac1c4;
     --dark-color: #756d70;
 }
-
+.blink{
+    animation: blink 1s linear infinite;
+}
+@keyframes blink{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1.5;
+    }
+}
 /* utinities end */
+audio{
+    position: sticky;
+    bottom: 0;
+    border-color: red;
+}
 
 /* ---------------------------------------------- */
 
 .navbar {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; 
     position: sticky;
     top: 0;
 }
@@ -107,12 +125,12 @@ h1.h2, h3, strong, a {
 .nav-list li a {
     font-size: 17px;
     text-decoration: none;
-    color: gray;
+    color: rgb(122, 116, 116);
     font-weight: bold;
 }
 
 .nav-list li a:hover {
-    color: rgb(158, 152, 152);
+    color: rgb(151, 143, 143);
 }
 
 .rightNav {
