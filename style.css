@@ -49,6 +49,7 @@ h1.h2, h3, strong, a {
     --main-light-color: #a39b9d;
     --nav-color: #cac1c4;
     --dark-color: #756d70;
+    --trans: all .2s linear;
 }
 
 .blink {
@@ -129,7 +130,7 @@ audio {
 
 .nav-list li a:hover {
     color: rgb(151, 143, 143);
-    transition: all .2s linear;
+    transition: var(--trans);
 }
 
 .rightNav {
@@ -174,10 +175,12 @@ audio {
     cursor: pointer;
     outline: none;
     padding: 6px 10px;
+    transition: var(--trans);
 }
 
 .btn-sm:hover {
     background: var(--main-light-color);
+    transition: var(--trans);
 }
 
 .background {
@@ -279,10 +282,12 @@ audio {
     padding: 10px;
     border-radius: 50%;
     cursor: pointer;
+    transition: var(--trans);
 }
 
 .social-icons i:hover {
     opacity: 0.7;
+    transition: var(--trans);
 }
 
 .btn {
@@ -297,10 +302,12 @@ audio {
     margin-top: 20px;
     outline: none;
     cursor: pointer;
+    transition: var(--trans);
 }
 
 .btn:hover {
     opacity: 0.8;
+    transition: var(--trans);
 }
 
 /* Home ends here */
@@ -338,16 +345,20 @@ audio {
 .sectionTag a {
     color: #000;
     text-decoration: none;
+    text-shadow: 1px 1px 73px #333;
+    transition: var(--trans);
 }
 
 .sectionTag a:hover {
     color: var(--main-color);
+    transition: var(--trans);
 }
 
 .thumbnail img {
+    box-shadow: 2px 2px 70px #222;
     width: 500px;
-    /* width: 250px;
-    border: 2px solid black; */
+    /* width: 250px; */
+    border: 1px solid #333;
     border-radius: 26px;
     margin-top: 19px;
     margin-right: 25px;
@@ -643,10 +654,12 @@ footer a:hover {
 @media only screen and (max-width: 1140px) {
     .logo img {
         width: 35%;
+        transition: var(--trans);
     }
     /* my end */
     .nav-list {
         flex-direction: column;
+        transition: var(--trans);
     }
     .navbar {
         height: 447px;
@@ -656,41 +669,52 @@ footer a:hover {
     }
     .rightNav {
         text-align: center;
+        transition: var(--trans);
     }
     /* center content main code {start} */
     .box-main {
         flex-direction: column;
         max-width: 100%;
+        transition: var(--trans);
     }
     .text-small, .text-big, .buttons, .social-icons {
         text-align: center;
+        transition: var(--trans);
     }
     /* center content main code {end} */
     #search {
         width: 100%;
+        transition: var(--trans);
     }
     .burger {
         display: block;
         margin-top: 11px;
+        transition: var(--trans);
     }
     .h-nav-resp {
         height: 72px;
+        transition: var(--trans);
     }
     .v-class-resp {
         opacity: 0;
+        transition: var(--trans);
     }
     .navbar ul li, .navbar ul li a, .search-form, .logo {
         display: none;
+        transition: var(--trans);
     }
     /*  */
     .section {
         flex-direction: column-reverse;
+        transition: var(--trans);
     }
     .paras {
         padding: 0px 0px;
+        transition: var(--trans);
     }
     .thumbnail img {
         width: 300px;
+        transition: var(--trans);
     }
 }
 
@@ -699,6 +723,7 @@ footer a:hover {
 @media only screen and (max-width: 771px) {
     .secondHalf img {
         display: none;
+        transition: var(--trans);
     }
     .after_bg {
         background: url(https://i.ibb.co/BCd9Rg0/pexels-pixabay-273238.jpg);
@@ -708,13 +733,16 @@ footer a:hover {
         background-size: cover;
         background-position: center;
         /* background-position: center; */
+        transition: var(--trans);
     }
     .welcome_color {
         /* color: #fff7f7; */
         color: #000;
+        transition: var(--trans);
     }
     #cursor {
         display: none;
+        transition: var(--trans);
     }
 }
 
@@ -725,15 +753,19 @@ footer a:hover {
 @media (max-width: 991px) {
     .contact {
         padding: 50px;
+        transition: var(--trans);
     }
     .container {
         flex-direction: column;
+        transition: var(--trans);
     }
     .container .contactInfo {
         margin-bottom: 40px;
+        transition: var(--trans);
     }
     .container .contactInfo, .contactForm {
         width: 100%;
+        transition: var(--trans);
     }
 }
 
@@ -742,9 +774,11 @@ footer a:hover {
 @media only screen and (max-width: 60em) {
     #cards {
         padding: 3rem;
+        transition: var(--trans);
     }
     .grid {
         grid-gap: 3rem;
+        transition: var(--trans);
     }
 }
 
@@ -753,12 +787,14 @@ footer a:hover {
 @media only screen and (max-width: 1020px) {
     .grid {
         width: 700px;
+        transition: var(--trans);
     }
 }
 
 @media only screen and (max-width: 689px) {
     .grid {
         width: 475px;
+        transition: var(--trans);
     }
 }
 
@@ -766,5 +802,6 @@ footer a:hover {
     .grid {
         width: 50px;
         margin-right: 250px;
+        transition: var(--trans);
     }
 }
