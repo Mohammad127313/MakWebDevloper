@@ -97,6 +97,29 @@
 </head>
 
 <body onload="myFunction()">
+  <!-- Load Facebook SDK for JavaScript -->
+  <div id="fb-root"></div>
+  <script>
+    window.fbAsyncInit = function () {
+      FB.init({
+        xfbml: true,
+        version: 'v9.0'
+      });
+    };
+
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+  <!-- Your Chat Plugin code -->
+  <div class="fb-customerchat" attribution=setup_tool page_id="109680124266136" theme_color="#d0c9cb"
+    logged_in_greeting="Hi! this is Mak .How can we help you?"
+    logged_out_greeting="Hi! this is Mak .How can we help you?">
+  </div>
   <!-- prloader start -->
   <div class="loading" id="loading"></div>
   <!-- prloader end -->
@@ -105,8 +128,7 @@
   <nav class="navbar background h-nav-resp">
     <!-- <div class="resp"> -->
     <ul class="nav-list v-class-resp">
-      <div class="logo"><a href="index.html"><img src="https://i.ibb.co/tb1rcB3/apple-touch-icon.png"
-            alt="logo"></a>
+      <div class="logo"><a href="index.html"><img src="https://i.ibb.co/tb1rcB3/apple-touch-icon.png" alt="logo"></a>
       </div>
       <!-- <div class="logo"><a href="mak.html"><img src="https://i.ibb.co/RBJdcwX/photo.jpg" alt="logo"></a></div> -->
       <li><a href="index.html" title="Home">Home</a></li>
@@ -241,8 +263,8 @@
     </div>
     <div class="thumbnail">
       <a href="https://i.ibb.co/7QvZGYF/Capture.jpg" target="_blank">
-        <img src="https://i.ibb.co/7QvZGYF/Capture.jpg" width="500px"
-          alt="Creat Dynamic Website Using HTML5 And CSS3" class="imgFluid">
+        <img src="https://i.ibb.co/7QvZGYF/Capture.jpg" width="500px" alt="Creat Dynamic Website Using HTML5 And CSS3"
+          class="imgFluid">
       </a>
     </div>
   </section>
@@ -259,9 +281,11 @@
         will show you how to create an awesome website in Hindi within a time.
         <br><br>
         <span style="font-size: 25px; text-align: center; color: red;">Disclamer</span><br>
-        <span style="font-size: 20px;">Inspired by <a href="https://www.fiverr.com/" target="_blank" style="color: gray; text-decoration: underline;">Fiverr</a></span>
+        <span style="font-size: 20px;">Inspired by <a href="https://www.fiverr.com/" target="_blank"
+            style="color: gray; text-decoration: underline;">Fiverr</a></span>
         <br><br>
-        <a target="_blank" href="https://drive.google.com/file/d/1SnrTgrhjn6wRMIpd77RhgRZGhdayfKUj/view?usp=sharing" target="_blank">
+        <a target="_blank" href="https://drive.google.com/file/d/1SnrTgrhjn6wRMIpd77RhgRZGhdayfKUj/view?usp=sharing"
+          target="_blank">
           <span class="" style="color: rgb(63, 153, 63);
                         font-size: 25px;">Click here to download the code</span></a>
         <br><br>
@@ -281,7 +305,7 @@
     <div class="paras">
       <p class="sectionTag text-big"><a target="_blank"
           href="https://drive.google.com/file/d/1egiI1NHL9kWJRyA58xB8u_fQItHF65Ir/view?usp=sharing">
-         An awesome website using HTML & CSS</a></p>
+          An awesome website using HTML & CSS</a></p>
       <p class="sectionSubTag text-small">
         Welcome all, we will see <b>An awesome website using HTML & CSS</b> with Source
         Code.
@@ -301,8 +325,8 @@
     </div>
     <div class="thumbnail">
       <a href="https://i.ibb.co/FVTJyMX/Capture.jpg" target="_blank">
-        <img src="https://i.ibb.co/FVTJyMX/Capture.jpg" width="500px"
-          alt="Colorful Hearts Trail Animation ... - img" class="imgFluid">
+        <img src="https://i.ibb.co/FVTJyMX/Capture.jpg" width="500px" alt="Colorful Hearts Trail Animation ... - img"
+          class="imgFluid">
       </a>
     </div>
   </section>
