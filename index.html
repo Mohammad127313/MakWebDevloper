@@ -116,7 +116,7 @@
     <div class="row">
       <div class="col-md-12">
         <video style="width: 100%; position: relative; z-index: -1;" id="videoPlayer" preload="none" autoplay loop
-          autobuffer muted playsinline onclick="if (!window.__cfRLUnblockHandlers) return false; this.play();">
+          autobuffer muted playsinline>
           <source src="bg_vd.mp4" />
         </video>
       </div>
@@ -128,8 +128,7 @@
           </h3>
           <p>Do You Want Free SourceCodes? I have got you covered. CodeWithMak gives FREE SourceCodes of Next Level
             Websites, Cool Projects ect. We provide Webdevelopment Courses, Latest Webdevelopment Articles & More.</p>
-          <div><a href="about.html"><button class="btn_theme" style="position: relative; bottom: 30px;">About
-                me!</button></a></div>
+          <div class="home_btn"><a href="about.html"><button class="btn_theme" style="position: relative; bottom: 30px;">About me!</button></a></div>
         </div>
       </div>
     </div>
@@ -203,7 +202,11 @@
         font-size: 24px;
     }
 }
-
+@media only screen and (max-width:695px){
+  .home_btn{
+    display: none;
+  }
+}
 
 </style>
 
