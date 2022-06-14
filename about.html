@@ -3177,7 +3177,7 @@ var pagenav_next = "Next";
 <div id='header-inner'>
 <div class='titlewrapper'>
 <h1 class='title'>
-<a href='https://www.thapatechnical.com/'>ThapaTechnical</a>
+<a href='https://mohammadabdullahk.github.io/Mak-Web-Developing/'>MakWebDeveloping</a>
 </h1>
 </div>
 <div class='descriptionwrapper'>
@@ -3541,27 +3541,37 @@ I hope my blog will guide you, and give you the knowledge that you are looking t
           document.getElementsByTagName('head')[0].appendChild(script);
         }
       };
-      var hasMore = function() {
-        return !!cursor;
-      };
-      var getMeta = function(key, comment) {
-        if ('iswriter' == key) {
-          var matches = !!comment.author
-              && comment.author.name == config.authorName
-              && comment.author.profileUrl == config.authorUrl;
-          return matches ? 'true' : '';
-        } else if ('deletelink' == key) {
-          return config.baseUri + '/delete-comment.g?blogID='
-               + config.blogId + '&postID=' + comment.id;
-        } else if ('deleteclass' == key) {
-          return comment.deleteclass;
-        }
-        return '';
-      };
+                
+	    
+	    
+	    
+	    
+	    
+// // 	    
+// 	         var hasMore = function() {
+//         return !!cursor;
+//       };
+//       var getMeta = function(key, comment) {
+//         if ('iswriter' == key) {
+//           var matches = !!comment.author
+//               && comment.author.name == config.authorName
+//               && comment.author.profileUrl == config.authorUrl;
+//           return matches ? 'true' : '';
+//         } else if ('deletelink' == key) {
+//           return config.baseUri + '/delete-comment.g?blogID='
+//                + config.blogId + '&postID=' + comment.id;
+//         } else if ('deleteclass' == key) {
+//           return comment.deleteclass;
+//         }
+//         return '';
+//       };
 
-      var replybox = null;
-      var replyUrlParts = null;
-      var replyParent = undefined;
+//       var replybox = null;
+//       var replyUrlParts = null;
+//       var replyParent = undefined;
+// 	    
+	    
+// 	    
 
       var onReply = function(commentId, domId) {
         if (replybox == null) {
