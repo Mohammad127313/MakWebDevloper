@@ -3191,18 +3191,18 @@ var pagenav_next = "Next";
 <div class='menu section' id='menu' name='Main Menu'><div class='widget LinkList' data-version='1' id='LinkList210'>
 <div class='widget-content'>
 <ul itemscope='' itemtype='http://schema.org/SiteNavigationElement'>
-<li><a href='https://www.thapatechnical.com/'>Home</a></li>
+<li><a href='https://mohammadabdullahk.github.io/Mak-Web-Developing/'>Home</a></li>
 <li itemprop='name'><a href='#' itemprop='url'>WebDevelopment</a></li>
 <li itemprop='name'><a href='#' itemprop='url'>_Websites</a></li>
-<li itemprop='name'><a href='https://www.thapatechnical.com/search/label/website' itemprop='url'>__HTML and CSS</a></li>
-<li itemprop='name'><a href='https://www.thapatechnical.com/search/label/Bootstrap%204' itemprop='url'>__Bootstrap</a></li>
-<li itemprop='name'><a href='https://www.thapatechnical.com/search/label/javascript' itemprop='url'>__JavaScript</a></li>
-<li itemprop='name'><a href='https://www.thapatechnical.com/search/label/html5%20and%20css3' itemprop='url'>_HTML5 and CSS3</a></li>
-<li itemprop='name'><a href='https://www.thapatechnical.com/search/label/Bootstrap%204' itemprop='url'>_Bootstrap4</a></li>
-<li itemprop='name'><a href='https://thapatechnicalblog.blogspot.com/search/label/javascript' itemprop='url'>_JavaScript</a></li>
-<li itemprop='name'><a href='https://thapatechnicalblog.blogspot.com/search/label/TechEssay' itemprop='url'>Tech Articles</a></li>
-<li itemprop='name'><a href=' https://www.thapatechnical.com/search/label/Mobile%20Computing%20In%20Hindi' itemprop='url'>MobileComputing</a></li>
-<li itemprop='name'><a href='https://www.thapatechnical.com/p/contact-us.html' itemprop='url'>Contact Us</a></li>
+<li itemprop='name'><a href='#' itemprop='url'>__HTML and CSS</a></li>
+<li itemprop='name'><a href='#' itemprop='url'>__Bootstrap</a></li>
+<li itemprop='name'><a href='#' itemprop='url'>__JavaScript</a></li>
+<li itemprop='name'><a href='#' itemprop='url'>_HTML5 and CSS3</a></li>
+<li itemprop='name'><a href='#' itemprop='url'>_Bootstrap4</a></li>
+<li itemprop='name'><a href='#' itemprop='url'>_JavaScript</a></li>
+<li itemprop='name'><a href='#' itemprop='url'>Tech Articles</a></li>
+<li itemprop='name'><a href='#' itemprop='url'>MobileComputing</a></li>
+<li itemprop='name'><a href='https://mohammadabdullahk.github.io/Mak-Web-Developing/' itemprop='url'>Contact Us</a></li>
 </ul>
 </div>
 </div></div>
@@ -3519,13 +3519,14 @@ I hope my blog will guide you, and give you the knowledge that you are looking t
         }
         return comments;
       };
-
+// 
       var paginator = function(callback) {
         if (hasMore()) {
           var url = config.feed + '?alt=json&v=2&orderby=published&reverse=false&max-results=50';
           if (cursor) {
             url += '&published-min=' + new Date(cursor).toISOString();
           }
+// 		
           window.bloggercomments = function(data) {
             var parsed = parse(data);
             cursor = parsed.length < 50 ? null
@@ -3636,8 +3637,11 @@ I hope my blog will guide you, and give you the knowledge that you are looking t
 <a name='comment-form'></a>
 <p>
 </p>
-<a href='https://www.blogger.com/comment/frame/4362012377884254076?pa=2986245783985957218&hl=en' id='comment-editor-src'></a>
-<iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' frameborder='0' height='410px' id='comment-editor' name='comment-editor' src='' width='100%'></iframe>
+<!-- 	// -->
+<!-- 	https://www.blogger.com/comment/frame/4362012377884254076?pa=2986245783985957218&hl=en -->
+<a href='' id='comment-editor-src'></a>
+<!-- // -->
+	<iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' frameborder='0' height='410px' id='comment-editor' name='comment-editor' src='' width='100%'></iframe>
 <script src='https://www.blogger.com/static/v1/jsbin/3262169375-comment_from_post_iframe.js' type='text/javascript'></script>
 <script type='text/javascript'>
       BLOG_CMT_createIframe('https://www.blogger.com/rpc_relay.html');
